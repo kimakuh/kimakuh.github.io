@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 사용자 정의 함수 - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="자바는 객체지향의 꽃 객체지향 : 객체는 일반적으로 말하는 물건을 의미하며, 여기서 물건은 단순한 데이터가 아니고 그 데이터의 조작 방법에 대한 정보 또한 포함하고 있어 그것을 대상으로 다루는 방법을 객체지향이라고 한다. 사용자 정의 함수사용자 정의 함수는 정해진 특정한 기능을 수행하는 모듈을 의미 ==&amp;gt; 함수를 적절히 활용하면 하나의 문제를 작게 분">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 사용자 정의 함수">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/22/java-기초-사용자-정의-함수/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="자바는 객체지향의 꽃 객체지향 : 객체는 일반적으로 말하는 물건을 의미하며, 여기서 물건은 단순한 데이터가 아니고 그 데이터의 조작 방법에 대한 정보 또한 포함하고 있어 그것을 대상으로 다루는 방법을 객체지향이라고 한다. 사용자 정의 함수사용자 정의 함수는 정해진 특정한 기능을 수행하는 모듈을 의미 ==&amp;gt; 함수를 적절히 활용하면 하나의 문제를 작게 분">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:15:59.050Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 사용자 정의 함수">
+<meta name="twitter:description" content="자바는 객체지향의 꽃 객체지향 : 객체는 일반적으로 말하는 물건을 의미하며, 여기서 물건은 단순한 데이터가 아니고 그 데이터의 조작 방법에 대한 정보 또한 포함하고 있어 그것을 대상으로 다루는 방법을 객체지향이라고 한다. 사용자 정의 함수사용자 정의 함수는 정해진 특정한 기능을 수행하는 모듈을 의미 ==&amp;gt; 함수를 적절히 활용하면 하나의 문제를 작게 분">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 사용자 정의 함수
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-22T03:27:04.000Z" itemprop="datePublished">Apr 22 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 924 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자바는 객체지향의 꽃</p>
+<p>객체지향 : 객체는 일반적으로 말하는 물건을 의미하며, 여기서 물건은 단순한 데이터가 아니고 그 데이터의 조작 방법에 대한 정보 또한 포함하고 있어 그것을 대상으로 다루는 방법을 객체지향이라고 한다.</p>
+<h2 id="사용자-정의-함수"><a href="#사용자-정의-함수" class="headerlink" title="사용자 정의 함수"></a>사용자 정의 함수</h2><p>사용자 정의 함수는 정해진 특정한 기능을 수행하는 모듈을 의미 ==&gt; 함수를 적절히 활용하면 하나의 문제를 작게 분해할 수 있다.<br>예를 들어, 이진 탐색 트리는 삽입, 삭제, 순회 등 다양한 함수의 집합으로 구성된다.<br>만약 사용자 정의 함수가 없다면 오직 메인 함수에서 모든 알고리즘을 처리해야 하는데 이는 작업의 효율성을 저하시킬 수 있다. 또한 함수는 각각의 모듈로서 쉽게 수정되고 보완될 수 있다는 장점이 있다.</p>
+<h2 id="3개의-수-최대-공약수를-찾는-프로그램"><a href="#3개의-수-최대-공약수를-찾는-프로그램" class="headerlink" title="3개의 수 최대 공약수를 찾는 프로그램"></a>3개의 수 최대 공약수를 찾는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 함수</span></span><br><span class="line"><span class="hljs-comment">// 함수의 반환형 ==&gt; int</span></span><br><span class="line"><span class="hljs-comment">// 함수의 이름 ==&gt; function</span></span><br><span class="line"><span class="hljs-comment">// 매개변수 ==&gt; int a, int b, int c ==&gt; 일반적으로 함수가 어떠한 값을 처리할때 사전에 주어진 값</span></span><br><span class="line"><span class="hljs-comment">// 사용자 정의 함수</span></span><br><span class="line"><span class="hljs-comment">// 자바에서는 메서드랑 함수랑 같은의미.</span></span><br><span class="line"><span class="hljs-comment">// 반환형, 함수명, 매개뱐스</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">function</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b, <span class="hljs-keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> min; <span class="hljs-comment">// 가장 작은 수</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (b &gt; c) &#123;</span><br><span class="line">            min = c;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            min = b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (a &gt; c) &#123;</span><br><span class="line">            min = c;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            min = a;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = min; i &gt; <span class="hljs-number">0</span>; i--) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (a % i == <span class="hljs-number">0</span> &amp;&amp; b % i == <span class="hljs-number">0</span> &amp;&amp; c % i == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="hljs-string">"(400,300,750)의 최대 공약수 = "</span> + function(<span class="hljs-number">400</span>, <span class="hljs-number">300</span>, <span class="hljs-number">750</span>)); <span class="hljs-comment">// 출력결과 (400,300,750)의 최대 공약수 = 50</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="약수-중-K번째로-작은-수를-찾는-프로그램"><a href="#약수-중-K번째로-작은-수를-찾는-프로그램" class="headerlink" title="약수 중 K번째로 작은 수를 찾는 프로그램"></a>약수 중 K번째로 작은 수를 찾는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">function</span><span class="hljs-params">(<span class="hljs-keyword">int</span> number, <span class="hljs-keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= number; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (number % i == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">            k--;</span><br><span class="line">            <span class="hljs-keyword">if</span> (k == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">                <span class="hljs-keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> result = function(<span class="hljs-number">3050</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// 3050의 10번째 약수를 찾겠다.</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (result == -<span class="hljs-number">1</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"3050의 10번째 약수는 없습니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"3050의 10번째 약수는 "</span> + result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="문자열에서-마지막-단어를-반환하는-함수"><a href="#문자열에서-마지막-단어를-반환하는-함수" class="headerlink" title="문자열에서 마지막 단어를 반환하는 함수"></a>문자열에서 마지막 단어를 반환하는 함수</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> <span class="hljs-title">function</span><span class="hljs-params">(String input)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> input.charAt(input.length() - <span class="hljs-number">1</span>); <span class="hljs-comment">// String은 문자열을 의미하는 자료형으로</span></span><br><span class="line">                                             <span class="hljs-comment">// 내부적으로 클래스로 작성이 되어있다.</span></span><br><span class="line">                                             <span class="hljs-comment">// 때문에 charAt과 같은 다양한 함수를 가진다.</span></span><br><span class="line">                                             <span class="hljs-comment">// charAt은 몇번째 문자열을 뽑아오는 함수</span></span><br><span class="line">                                             <span class="hljs-comment">// input이라는 입력값이 들어왔을 때</span></span><br><span class="line">                                             <span class="hljs-comment">// input의 길이 즉 문자열의 길이[length()]에서</span></span><br><span class="line">                                             <span class="hljs-comment">// -1을 뺀 문자열을 가져온다.</span></span><br><span class="line">                                             <span class="hljs-comment">// ==&gt; 즉 가장마지막에 위치한 문자열을 가져온다.</span></span><br><span class="line">                                             <span class="hljs-comment">// input.length() 은 해당 문자열의 길이를 말한다.</span></span><br><span class="line">                                             <span class="hljs-comment">// 즉 Hello World를 보면 띄어쓰기를 포함해서</span></span><br><span class="line">                                             <span class="hljs-comment">// 총 11개의 문자열로 구성되어 있다.</span></span><br><span class="line">                                             <span class="hljs-comment">// charAt은 0부터 시작하기 때문에 Hello World에서</span></span><br><span class="line">                                             <span class="hljs-comment">// 10번째 문자열은 d가 된다.</span></span><br><span class="line">                                             <span class="hljs-comment">// charAt(10) ==&gt; 'd'</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="hljs-string">"Hello World의 마지막 단어는 "</span> + function(<span class="hljs-string">"Hello World"</span>)); <span class="hljs-comment">// 출력결과 d</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="max-를-이용하여-최대값을-저장하는-프로그램"><a href="#max-를-이용하여-최대값을-저장하는-프로그램" class="headerlink" title="max()를 이용하여 최대값을 저장하는 프로그램"></a>max()를 이용하여 최대값을 저장하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (a &gt; b) ? a : b; <span class="hljs-comment">// 삼항연산자</span></span><br><span class="line">                            <span class="hljs-comment">// a가 b보다 크다면 a를 반환하고</span></span><br><span class="line">                            <span class="hljs-comment">// 그렇지 않다면 b를 반환한다.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">function</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b, <span class="hljs-keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> result = max(a, b); <span class="hljs-comment">// a와 b중에서 더 큰값을 result에 넣는다.</span></span><br><span class="line">    result = max(result, c); <span class="hljs-comment">// result의 값을 다시 c와 비교</span></span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">    <span class="hljs-comment">// 결과적으로 가장 큰 값이 result에 담기게된다.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 함수를 여러개 만들어서 모듈화를 한다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="hljs-string">"(345,567,783) 중에 가장 큰 값은 "</span> + function(<span class="hljs-number">345</span>, <span class="hljs-number">567</span>, <span class="hljs-number">7830</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/22/java-기초-반복함수와-재귀함수/">[java]기초 - 반복함수와 재귀함수</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/22/java-기초-배운내용정리하기-과제/">[java]기초 - 배운내용정리하기(과제)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

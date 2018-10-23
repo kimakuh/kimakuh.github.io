@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 조건문 &amp; 반복문 - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="논리적 흐름의 기본 조건문 : 조건에 따라 실행하거나 실행하지 않거나. ==&amp;gt; 조건에 따라서 실행여부 결정반복문 : 조건이 맞다면 그 조건 안에서 계속해서 반복한다. 조건문 &amp;amp; 반복문 정리 하나의 비교연산자는 true 혹은 false를 반환하게 됩니다. 모든 조건문 / 반복문에서는 왠만하면 무조건 괄호를 적용해라. for문 혹은 while문은">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 조건문 &amp; 반복문">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/21/java-기초-조건문-반복문/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="논리적 흐름의 기본 조건문 : 조건에 따라 실행하거나 실행하지 않거나. ==&amp;gt; 조건에 따라서 실행여부 결정반복문 : 조건이 맞다면 그 조건 안에서 계속해서 반복한다. 조건문 &amp;amp; 반복문 정리 하나의 비교연산자는 true 혹은 false를 반환하게 됩니다. 모든 조건문 / 반복문에서는 왠만하면 무조건 괄호를 적용해라. for문 혹은 while문은">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:32:47.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 조건문 &amp; 반복문">
+<meta name="twitter:description" content="논리적 흐름의 기본 조건문 : 조건에 따라 실행하거나 실행하지 않거나. ==&amp;gt; 조건에 따라서 실행여부 결정반복문 : 조건이 맞다면 그 조건 안에서 계속해서 반복한다. 조건문 &amp;amp; 반복문 정리 하나의 비교연산자는 true 혹은 false를 반환하게 됩니다. 모든 조건문 / 반복문에서는 왠만하면 무조건 괄호를 적용해라. for문 혹은 while문은">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 조건문 &amp; 반복문
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T11:34:20.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 942 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>논리적 흐름의 기본</p>
+<p>조건문 : 조건에 따라 실행하거나 실행하지 않거나. ==&gt; 조건에 따라서 실행여부 결정<br>반복문 : 조건이 맞다면 그 조건 안에서 계속해서 반복한다.</p>
+<h2 id="조건문-amp-반복문-정리"><a href="#조건문-amp-반복문-정리" class="headerlink" title="조건문 &amp; 반복문 정리"></a>조건문 &amp; 반복문 정리</h2><ul>
+<li>하나의 비교연산자는 true 혹은 false를 반환하게 됩니다.</li>
+<li>모든 조건문 / 반복문에서는 왠만하면 무조건 괄호를 적용해라.</li>
+<li>for문 혹은 while문은 얼마든지 중첩될 수 있다.</li>
+<li>for(;;)은 while(ture)와 똑같이 무한 루프라는 의미로 동작한다.</li>
+<li>break;를 이용하여 반복문을 즉시 빠져나올 수 있다.</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (;;) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"출력"</span>);</span><br><span class="line">        count++;</span><br><span class="line">        <span class="hljs-keyword">if</span> (count == <span class="hljs-number">10</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="if문을-이용하여-문자열이-특정문자열을-포함하는지-확인하는-프로그램"><a href="#if문을-이용하여-문자열이-특정문자열을-포함하는지-확인하는-프로그램" class="headerlink" title="if문을 이용하여 문자열이 특정문자열을 포함하는지 확인하는 프로그램"></a>if문을 이용하여 문자열이 특정문자열을 포함하는지 확인하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String a = <span class="hljs-string">"I LOVE YOU."</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 조건문</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">if</span>(a.contains(<span class="hljs-string">"LOVE"</span>)) &#123;</span><br><span class="line">        <span class="hljs-comment">// 문자열을 검사한다.</span></span><br><span class="line">        <span class="hljs-comment">// a에 들어있는 I LOVE YOU. 라는 문자열에</span></span><br><span class="line">        <span class="hljs-comment">// LOVE가 들어있는지(포함하는지)</span></span><br><span class="line">        <span class="hljs-comment">// 들어있는 경우 실행되는 문장이 들어간다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"Me Too."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        <span class="hljs-comment">// 들어있지 않은 경우 실행되는 부분</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"I Hate You."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="점수에-따라서-다른-메세지를-출력하는-프로그램"><a href="#점수에-따라서-다른-메세지를-출력하는-프로그램" class="headerlink" title="점수에 따라서 다른 메세지를 출력하는 프로그램"></a>점수에 따라서 다른 메세지를 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> score = <span class="hljs-number">95</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">90</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"A+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">80</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"B+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"C+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">60</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"D+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"F 입니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="문자열과-정수형을-각각-조건문을-이용해-활용"><a href="#문자열과-정수형을-각각-조건문을-이용해-활용" class="headerlink" title="문자열과 정수형을 각각 조건문을 이용해 활용"></a>문자열과 정수형을 각각 조건문을 이용해 활용</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String a = <span class="hljs-string">"Man"</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> b = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 자바는 String을 비교할때 equal()을 이용한다.</span></span><br><span class="line">    <span class="hljs-comment">// 이유? String은 다른 자료형들과는 다른 문자열 자료형이기 때문이다.</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (a.equals(<span class="hljs-string">"Man"</span>)) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"남자입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"남자가 아닙니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (b == <span class="hljs-number">3</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"b는 3입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"b는 3이 아닙니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (a.equalsIgnoreCase(<span class="hljs-string">"man"</span>) &amp;&amp; b == <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">// 대소문자 구분을 하지 않고 비교</span></span><br><span class="line">                                               <span class="hljs-comment">// a가 대소문자와 상관없이 man 인지 비교하고</span></span><br><span class="line">                                               <span class="hljs-comment">// b가 0 이라면, 즉 둘다 참이라면 아래의 내용이 출력된다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"참입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"거짓입니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">//  ==&gt; 위와 같이 연산자는 조건문 / 반복문과 함께 사용된다.</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while을-이용하여-1부터-1000까지의-합을-출력하는-프로그램"><a href="#while을-이용하여-1부터-1000까지의-합을-출력하는-프로그램" class="headerlink" title="while을 이용하여 1부터 1000까지의 합을 출력하는 프로그램"></a>while을 이용하여 1부터 1000까지의 합을 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>, sum = <span class="hljs-number">0</span>; <span class="hljs-comment">// 한번에 두개의 변수 선언</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">while</span> (i &lt;= <span class="hljs-number">1000</span>) &#123; <span class="hljs-comment">// 1부터 1000이 될때까지</span></span><br><span class="line">        sum += i++;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="hljs-string">"1부터 1000까지의 합 : "</span> + sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for문을-이용하여-삼각형을-출력하는-프로그램"><a href="#for문을-이용하여-삼각형을-출력하는-프로그램" class="headerlink" title="for문을 이용하여 삼각형을 출력하는 프로그램"></a>for문을 이용하여 삼각형을 출력하는 프로그램</h2><h3 id="for문-사용1"><a href="#for문-사용1" class="headerlink" title="for문 사용1"></a>for문 사용1</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">30</span>; <span class="hljs-comment">// N이라는 30이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// for문 : 초기화 부분, 조건 부분, 연산 부분</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N; i &gt; <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">// int 는 N부터 시작해서</span></span><br><span class="line">                                  <span class="hljs-comment">// i가 0보다 클때</span></span><br><span class="line">                                  <span class="hljs-comment">// i를 1씩 감소하며</span></span><br><span class="line">                                  <span class="hljs-comment">// 반복힌다.</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="hljs-string">"*"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="for문-사용2-이중for문"><a href="#for문-사용2-이중for문" class="headerlink" title="for문 사용2(이중for문)"></a>for문 사용2(이중for문)</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">30</span>; <span class="hljs-comment">// N이라는 30이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// for문 : 초기화 부분, 조건 부분, 연산 부분</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N; i &gt; <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">// int 는 N부터 시작해서</span></span><br><span class="line">                                  <span class="hljs-comment">// i가 0보다 클때</span></span><br><span class="line">                                  <span class="hljs-comment">// i를 1씩 감소하며</span></span><br><span class="line">                                  <span class="hljs-comment">// 반복힌다.</span></span><br><span class="line">        </span><br><span class="line">        <span class="hljs-comment">// 이중 for문</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j&gt;<span class="hljs-number">0</span>;j--) &#123;</span><br><span class="line">            System.out.print(<span class="hljs-string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println( );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for문을-이용하여-원을-출력하는-프로그램"><a href="#for문을-이용하여-원을-출력하는-프로그램" class="headerlink" title="for문을 이용하여 원을 출력하는 프로그램"></a>for문을 이용하여 원을 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">15</span>; <span class="hljs-comment">// N이라는 15이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = -N; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j =- N; j &lt;= N; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (i * i + j * j &lt;= N * N) &#123;</span><br><span class="line">                System.out.print(<span class="hljs-string">"*"</span>);</span><br><span class="line">            &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                System.out.print(<span class="hljs-string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/22/java-기초-기본-입출력-Input-Output/">[java]기초 - 기본 입출력(Input &amp; Output)</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/21/java기초-연산자-Operator/">[java] 기초 - 연산자(Operator)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

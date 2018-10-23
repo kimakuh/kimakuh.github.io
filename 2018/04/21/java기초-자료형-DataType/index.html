@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java] 기초 - 자료형(Data Type) - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="자료형 : 나에게 필요한 데이터 타입 어떠한 데이터를 표현하고 싶을 때,데이터를 표현해줄 수 있는 타입을 만들어준다. =&amp;gt; 표현할 데이터의 형태를 정의 자료형(Data Type)  Primitive (원시자료형) Non-Primitive (비원시자료형) =&amp;gt; 내부적 함수가 존재한다.  일반적인 프로그래밍 언어에는 정수 자료형 int , 실수 자료">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java] 기초 - 자료형(Data Type)">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/21/java기초-자료형-DataType/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="자료형 : 나에게 필요한 데이터 타입 어떠한 데이터를 표현하고 싶을 때,데이터를 표현해줄 수 있는 타입을 만들어준다. =&amp;gt; 표현할 데이터의 형태를 정의 자료형(Data Type)  Primitive (원시자료형) Non-Primitive (비원시자료형) =&amp;gt; 내부적 함수가 존재한다.  일반적인 프로그래밍 언어에는 정수 자료형 int , 실수 자료">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:33:30.318Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java] 기초 - 자료형(Data Type)">
+<meta name="twitter:description" content="자료형 : 나에게 필요한 데이터 타입 어떠한 데이터를 표현하고 싶을 때,데이터를 표현해줄 수 있는 타입을 만들어준다. =&amp;gt; 표현할 데이터의 형태를 정의 자료형(Data Type)  Primitive (원시자료형) Non-Primitive (비원시자료형) =&amp;gt; 내부적 함수가 존재한다.  일반적인 프로그래밍 언어에는 정수 자료형 int , 실수 자료">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java] 기초 - 자료형(Data Type)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T07:29:57.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 609 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자료형 : 나에게 필요한 데이터 타입</p>
+<p>어떠한 데이터를 표현하고 싶을 때,<br>데이터를 표현해줄 수 있는 타입을 만들어준다. =&gt; 표현할 데이터의 형태를 정의</p>
+<p>자료형(Data Type)</p>
+<ul>
+<li>Primitive (원시자료형)</li>
+<li>Non-Primitive (비원시자료형) =&gt; 내부적 함수가 존재한다.</li>
+</ul>
+<p>일반적인 프로그래밍 언어에는 정수 자료형 int , 실수 자료형 float과 double, 문자 자료형 char, 문자 자료형 char, 문자열 자료형 String이 사용된다. 자바에서는 특히 String을 많이 활용한다.</p>
+<h2 id="double을-이용한-평균값-구하는-프로그램"><a href="#double을-이용한-평균값-구하는-프로그램" class="headerlink" title="double을 이용한 평균값 구하는 프로그램"></a>double을 이용한 평균값 구하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> a = <span class="hljs-number">10.3</span>;</span><br><span class="line">    <span class="hljs-keyword">double</span> b = <span class="hljs-number">9.6</span>;</span><br><span class="line">    <span class="hljs-keyword">double</span> c = <span class="hljs-number">10.1</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println((a + b + c) / <span class="hljs-number">3</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 3개의 실수형을 선언해서 3개의 값을 더하고</span></span><br><span class="line">    <span class="hljs-comment">// 3으로 나눈 즉, 평균값을 구하는 프로그램</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="char을-이용한-문자출력-프로그램"><a href="#char을-이용한-문자출력-프로그램" class="headerlink" title="char을 이용한 문자출력 프로그램"></a>char을 이용한 문자출력 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> i = <span class="hljs-string">'a'</span>; i &lt;= <span class="hljs-string">'z'</span>; i++) &#123;</span><br><span class="line">        System.out.print(i + <span class="hljs-string">" "</span>);</span><br><span class="line">    </span><br><span class="line">        <span class="hljs-comment">// 컴퓨터 내부적으로 아스키코드를 활용하여</span></span><br><span class="line">        <span class="hljs-comment">// a 부터 z 까지 1씩 증가시키면서 출력한다.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10진수를-8진수와-16진수로-변경하는-프로그램"><a href="#10진수를-8진수와-16진수로-변경하는-프로그램" class="headerlink" title="10진수를 8진수와 16진수로 변경하는 프로그램"></a>10진수를 8진수와 16진수로 변경하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">200</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"10진수: "</span> + a);</span><br><span class="line">    System.out.format(<span class="hljs-string">"8진수: %o\n"</span>, a); <span class="hljs-comment">// 형식지정자</span></span><br><span class="line">    System.out.format(<span class="hljs-string">"16진수: %x\n"</span>, a); <span class="hljs-comment">// 형식지정자</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 10진수를 8진수와 16진수로 변경</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="String의-substring-함수-활용"><a href="#String의-substring-함수-활용" class="headerlink" title="String의 substring 함수 활용"></a>String의 substring 함수 활용</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String name = <span class="hljs-string">"String Type"</span>;</span><br><span class="line">    System.out.println(name);</span><br><span class="line">    System.out.println(name.substring(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)); <span class="hljs-comment">// 실행결과 S</span></span><br><span class="line">                                              <span class="hljs-comment">// 0 =&gt; 출력할 첫번째문자열 (시작점)</span></span><br><span class="line">                                              <span class="hljs-comment">// 1 =&gt; 출력할 마지막 문자열 (종료점)</span></span><br><span class="line">    System.out.println(name.substring(<span class="hljs-number">5</span>, <span class="hljs-number">8</span>)); <span class="hljs-comment">// 실행결과 g T </span></span><br><span class="line">                                              <span class="hljs-comment">// 공백도 하나의 문자로 인식</span></span><br><span class="line">                                              </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="자료형-정리"><a href="#자료형-정리" class="headerlink" title="자료형 정리"></a>자료형 정리</h2><ul>
+<li>기본적으로 정수를 나타내는 자료형이 많은 이유는 각 자료형이 차지하는 메모리 공간의 크기가 다르기 때문</li>
+<li>double 형이라고 하더라도 과도하게 큰 수를 저장하고자 하면 잘못된 계산결과가 나올 수 있다.</li>
+<li>소수점 표기 형식을 지수형식으로 출력하고 싶으면 %e를 이용하면 된다.</li>
+<li>자바에서 String은 내부적으로 Char의 배열로 되어있다. 자바에서 String의 최대 크기는? 컴퓨터의 메모리 크기만큼</li>
+<li>자바의 String은 클래스 기반의 비원시적인 자료형</li>
+</ul>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/21/java기초-연산자-Operator/">[java] 기초 - 연산자(Operator)</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/21/java기초-변수-Variable/">[java] 기초 - 변수(Variable)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

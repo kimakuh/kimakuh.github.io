@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 기본 입출력(Input &amp; Output) - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="사용자와 상호작용입력 받은 자료는 내부적으로 어떠한 처리를 한 뒤에 다시 사용자에게 그 값을 반환할 수 있다. 프로그램이 입출력을 지원한다는 것은 사용자 인터페이스가 뛰어나다는 의미 기본입출력 팁 자바에서는 Scanner클래스만 잘 활용해도 다양한 입출력 형태를 구현할 수 있다. 주석은 일단 최대한 많이 작성하는 습관을 들여야 한다. 주석은 컴파일 단계에서">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 기본 입출력(Input &amp; Output)">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/22/java-기초-기본-입출력-Input-Output/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="사용자와 상호작용입력 받은 자료는 내부적으로 어떠한 처리를 한 뒤에 다시 사용자에게 그 값을 반환할 수 있다. 프로그램이 입출력을 지원한다는 것은 사용자 인터페이스가 뛰어나다는 의미 기본입출력 팁 자바에서는 Scanner클래스만 잘 활용해도 다양한 입출력 형태를 구현할 수 있다. 주석은 일단 최대한 많이 작성하는 습관을 들여야 한다. 주석은 컴파일 단계에서">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:16:04.706Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 기본 입출력(Input &amp; Output)">
+<meta name="twitter:description" content="사용자와 상호작용입력 받은 자료는 내부적으로 어떠한 처리를 한 뒤에 다시 사용자에게 그 값을 반환할 수 있다. 프로그램이 입출력을 지원한다는 것은 사용자 인터페이스가 뛰어나다는 의미 기본입출력 팁 자바에서는 Scanner클래스만 잘 활용해도 다양한 입출력 형태를 구현할 수 있다. 주석은 일단 최대한 많이 작성하는 습관을 들여야 한다. 주석은 컴파일 단계에서">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 기본 입출력(Input &amp; Output)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-22T01:56:29.000Z" itemprop="datePublished">Apr 22 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 560 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>사용자와 상호작용<br>입력 받은 자료는 내부적으로 어떠한 처리를 한 뒤에 다시 사용자에게 그 값을 반환할 수 있다.</p>
+<p>프로그램이 입출력을 지원한다는 것은 사용자 인터페이스가 뛰어나다는 의미</p>
+<h2 id="기본입출력-팁"><a href="#기본입출력-팁" class="headerlink" title="기본입출력 팁"></a>기본입출력 팁</h2><ul>
+<li>자바에서는 Scanner클래스만 잘 활용해도 다양한 입출력 형태를 구현할 수 있다.</li>
+<li>주석은 일단 최대한 많이 작성하는 습관을 들여야 한다. 주석은 컴파일 단계에서 제거되기 때문에 프로그램의 크기와는 상관없다.</li>
+<li>Scanner로 문자열을 입력받고 싶을 때에는 next() 함수와 nextLine()을 적절히 활용하자.</li>
+</ul>
+<h2 id="특정한-정수를-입력받아서-그대로-출력하는-프로그램"><a href="#특정한-정수를-입력받아서-그대로-출력하는-프로그램" class="headerlink" title="특정한 정수를 입력받아서 그대로 출력하는 프로그램"></a>특정한 정수를 입력받아서 그대로 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in); <span class="hljs-comment">// 자바에서 제공하는 라이브러리</span></span><br><span class="line">                                           <span class="hljs-comment">// (System.in) 콘솔장에서 입력하는 어떠한 데이터.</span></span><br><span class="line">    System.out.print(<span class="hljs-string">"정수를 입력하세요 : "</span>);</span><br><span class="line">    <span class="hljs-keyword">int</span> i = scan.nextInt(); <span class="hljs-comment">// 입력받은 정수를 i에 넣어준다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"입력된 정수는 "</span> + i + <span class="hljs-string">"입니다."</span>);</span><br><span class="line">    scan.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="파일에-차례로-입력된-모든-정수에-100을-곱해-출력하는-프로그램"><a href="#파일에-차례로-입력된-모든-정수에-100을-곱해-출력하는-프로그램" class="headerlink" title="파일에 차례로 입력된 모든 정수에 100을 곱해 출력하는 프로그램"></a>파일에 차례로 입력된 모든 정수에 100을 곱해 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 파일을 컨트롤할 수 있는 file변수와</span></span><br><span class="line">    <span class="hljs-comment">// 그 파일로 부터 직접 파일에 쓰여있는 내용을 읽어올 수 있는 scan 변수를 만든다.</span></span><br><span class="line">    File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"input.txt"</span>); <span class="hljs-comment">// input.txt 파일을 읽어와서 file변수가 그것을 처리할 수 있게 한다.</span></span><br><span class="line">    <span class="hljs-keyword">try</span> &#123; <span class="hljs-comment">// 파일이 없을 경우, 또는 오류상황이 발생했을때를 대비해 예외처리를 한다.</span></span><br><span class="line">        Scanner scan = <span class="hljs-keyword">new</span> Scanner(file); <span class="hljs-comment">// 사용자로부터 입력받는게 아니라 파일을 통해 입력을 받는다.</span></span><br><span class="line">        <span class="hljs-keyword">while</span> (scan.hasNextInt()) &#123; <span class="hljs-comment">// scan이 읽어오고 있는 파일에서 다음으로 읽어올 정수가 있나 확인</span></span><br><span class="line">            System.out.println(scan.nextInt() * <span class="hljs-number">100</span>); <span class="hljs-comment">// 정수에 100을 곱하여 출력</span></span><br><span class="line">        &#125;</span><br><span class="line">        scan.close(); </span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"파일을 읽어오는 도중에 오류가 발생했습니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>input.txt</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">300 30 20 49 39 227</span><br></pre></td></tr></table></figure>
+<h2 id="1단부터-9단까지-구구단을-출력하는-프로그램"><a href="#1단부터-9단까지-구구단을-출력하는-프로그램" class="headerlink" title="1단부터 9단까지 구구단을 출력하는 프로그램"></a>1단부터 9단까지 구구단을 출력하는 프로그램</h2>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/22/java-기초-배운내용정리하기-과제/">[java]기초 - 배운내용정리하기(과제)</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/21/java-기초-조건문-반복문/">[java]기초 - 조건문 &amp; 반복문</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

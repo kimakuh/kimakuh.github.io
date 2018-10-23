@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java] Character Stream - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="자바의 입출력 Character Stream - 문자 단위로 출력하기123456789101112131415161718192021222324public static void main(String[] args) throws Exception &amp;#123;    // 1) 문자 단위로 출력할 도구 준비    FileWriter out = new FileWriter">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java] Character Stream">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/11/java-Character-Stream/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="자바의 입출력 Character Stream - 문자 단위로 출력하기123456789101112131415161718192021222324public static void main(String[] args) throws Exception &amp;#123;    // 1) 문자 단위로 출력할 도구 준비    FileWriter out = new FileWriter">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:13:25.034Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java] Character Stream">
+<meta name="twitter:description" content="자바의 입출력 Character Stream - 문자 단위로 출력하기123456789101112131415161718192021222324public static void main(String[] args) throws Exception &amp;#123;    // 1) 문자 단위로 출력할 도구 준비    FileWriter out = new FileWriter">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java] Character Stream
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-11T10:19:48.000Z" itemprop="datePublished">Apr 11 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            9 minutes read (About 1275 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자바의 입출력</p>
+<h2 id="Character-Stream-문자-단위로-출력하기"><a href="#Character-Stream-문자-단위로-출력하기" class="headerlink" title="Character Stream - 문자 단위로 출력하기"></a>Character Stream - 문자 단위로 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 1) 문자 단위로 출력할 도구 준비</span></span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 2) 문자 출력하기</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 자바는 문자 데이터를 다룰 때 UTF-16(2바이트) 유니코드를 사용한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 그래서 출력할 때 UTF-16 2바이트 유니코드값을 </span></span><br><span class="line">    <span class="hljs-comment">//    JVM에 설정된 기본 문자코드표의 값으로 변환하여 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM을 실행할 때 출력 데이터의 문자 코드표를 지정하지 않으면 </span></span><br><span class="line">    <span class="hljs-comment">//    OS의 기본 문자코드표에 따라 변환한다.</span></span><br><span class="line">    <span class="hljs-comment">//    예) Windows OS(MS949), Unix(UTF-8)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM을 실행할 때 출력 데이터의 문자 코드표를 지정하는 방법</span></span><br><span class="line">    <span class="hljs-comment">//    &gt; java -Dfile.encoding=문자코드표 -cp 클래스경로 클래스명</span></span><br><span class="line">    <span class="hljs-comment">// </span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 따라서 다음 4바이트 값을 출력하면 </span></span><br><span class="line">    <span class="hljs-comment">//    앞의 2바이트는 버리고, 뒤의 2바이트(UTF-16)를 UTF-8 코드표에 따라 </span></span><br><span class="line">    <span class="hljs-comment">//    1 ~ 4 바이트 값으로 변환하여 출력한다.</span></span><br><span class="line">    out.write(<span class="hljs-number">0x7a6bac00</span>); </span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"출력 완료!"</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-단위로-읽기"><a href="#Character-Stream-문자-단위로-읽기" class="headerlink" title="Character Stream - 문자 단위로 읽기"></a>Character Stream - 문자 단위로 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 1) 파일의 데이터를 읽을 객체를 준비한다. </span></span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 2) JVM에 설정된 문자코드표에 따라 바이트를 읽어서 UTF-16으로 바꾼 후에 리턴한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 2바이트 UTF-16의 코드 값이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM에 설정된 문자코드표가 UTF-8이면 1 ~ 4 바이트까지 </span></span><br><span class="line">    <span class="hljs-comment">//    문자에 따라 가변적으로 읽어들이다.</span></span><br><span class="line">    <span class="hljs-comment">//    즉 영어 문자는 1바이트를 읽어 2바이트 UTF-16 코드 값으로 바꿀 것이다.</span></span><br><span class="line">    <span class="hljs-comment">//    한글 문자는 3바이트를 읽어 2바이트 UTF-16 코드 값으로 바꿀 것이다.</span></span><br><span class="line">    <span class="hljs-comment">//    문자에 따라 읽는 바이트의 개수가 다르다는 것이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 이것이 FileInputStream의 read() 메서드와 다른 점이다.</span></span><br><span class="line">    <span class="hljs-comment">//    FileInputStream의 read()는 무조건 1바이트를 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">//    그리고 값을 변환하지 않는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; FileReader의 read()는 문자에 따라 1 바이트에서 4 바이트까지 </span></span><br><span class="line">    <span class="hljs-comment">//    읽는 바이트 수가 다른다. </span></span><br><span class="line">    <span class="hljs-comment">//    리턴 값도 읽을 값을 그대로 리턴하는 것이 아니라 UTF-16 코드 값으로 변경하여 </span></span><br><span class="line">    <span class="hljs-comment">//    리턴한다. </span></span><br><span class="line">    <span class="hljs-comment">//    왜? JVM에서 문자를 UTF-16 코드 값으로 다루기 때문이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 그래서 이미지 파일이나 동영상 파일과 같이 바이너리 데이터는 </span></span><br><span class="line">    <span class="hljs-comment">///   FileReader를 사용하여 읽어서는 안된다.</span></span><br><span class="line">    <span class="hljs-comment">//    왜? 문자라고 간주하고 값을 변경하기 때문이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> ch = in.read(); </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 3) 읽기 도구를 닫는다.</span></span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%x\n"</span>, ch);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열-출력하기"><a href="#Character-Stream-문자-배열-출력하기" class="headerlink" title="Character Stream - 문자 배열 출력하기"></a>Character Stream - 문자 배열 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] chars = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[] &#123;<span class="hljs-string">'A'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'C'</span>,<span class="hljs-string">'가'</span>,<span class="hljs-string">'각'</span>,<span class="hljs-string">'간'</span>,<span class="hljs-string">'똘'</span>,<span class="hljs-string">'똥'</span>&#125;; </span><br><span class="line">    </span><br><span class="line">    out.write(chars); <span class="hljs-comment">// 문자 배열 전체를 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// 당연히 UTF-16을 JVM 기본 문자 코드표에 따라 변환하여 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// JVM이 입출력 문자 코드표로 UTF-8을 사용한다면</span></span><br><span class="line">    <span class="hljs-comment">// 영어는 1바이트로 변환되어 출력될 것이고,</span></span><br><span class="line">    <span class="hljs-comment">// 한글은 3바이트로 변환되어 출력될 것이다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열-읽기"><a href="#Character-Stream-문자-배열-읽기" class="headerlink" title="Character Stream - 문자 배열 읽기"></a>Character Stream - 문자 배열 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// UTF-16 문자 코드 값을 저장할 배열을 준비한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 이렇게 임시 데이터를 저장하기 위해 만든 바이트 배열을 보통 "버퍼(buffer)"라 한다.</span></span><br><span class="line">    <span class="hljs-keyword">char</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 버퍼가 꽉 찰 때까지 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 물론 버퍼 크기보다 파일의 데이터가 적으면 파일을 모두 읽어 버퍼에 저장한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 읽은 바이트의 개수이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 파일을 읽을 때 JVM의 문자코드표에 따라 바이트를 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">//    그리고 2바이트 UTF-16 코드 값으로 변환하여 리턴한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM의 문자코드표가 UTF-8이라면,</span></span><br><span class="line">    <span class="hljs-comment">//    파일을 읽을 때, 영어나 숫자, 특수기호는 1바이트를 읽어 UTF-16으로 변환할 것이고</span></span><br><span class="line">    <span class="hljs-comment">//    한글은 3바이트를 읽어 UTF-16으로 변환할 것이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf); </span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%c(%x) "</span>, buf[i], (<span class="hljs-keyword">int</span>)buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열의-특정-부분을-출력하기"><a href="#Character-Stream-문자-배열의-특정-부분을-출력하기" class="headerlink" title="Character Stream - 문자 배열의 특정 부분을 출력하기"></a>Character Stream - 문자 배열의 특정 부분을 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] chars = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[] &#123;<span class="hljs-string">'A'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'C'</span>,<span class="hljs-string">'가'</span>,<span class="hljs-string">'각'</span>,<span class="hljs-string">'간'</span>,<span class="hljs-string">'똘'</span>,<span class="hljs-string">'똥'</span>&#125;; </span><br><span class="line">    </span><br><span class="line">    out.write(chars, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 2번 문자부터 3 개의 문자를 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-읽은-데이터를-문자-배열의-특정-위치에-저장하기"><a href="#Character-Stream-읽은-데이터를-문자-배열의-특정-위치에-저장하기" class="headerlink" title="Character Stream - 읽은 데이터를 문자 배열의 특정 위치에 저장하기"></a>Character Stream - 읽은 데이터를 문자 배열의 특정 위치에 저장하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소, 저장할위치, 읽을바이트개수)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 실제 읽은 문자의 개수이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf, <span class="hljs-number">10</span>, <span class="hljs-number">40</span>); <span class="hljs-comment">// 40개의 문자를 읽어 10번 방부터 저장한다. </span></span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>; i &lt; (count + <span class="hljs-number">10</span>); i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%c(%x) "</span>, buf[i], (<span class="hljs-keyword">int</span>)buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/11/java-데이터-출력/">[java] 데이터 출력</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/11/java-Byte-Stream/">[java] Byte Stream</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

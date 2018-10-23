@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 인터페이스(Interface) - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="인터페이스 (Interface) - 설계의 본질 인터페이스(Interface)는 얼핏 보기에는 추상(Abstract) 클래스와 매우 흡사한 개념으로 느껴질 수 있다.인터페이스는 숙련된 자바 개발자들에게 아주 선호되는 설계 기능이면서 자바에서 다중 상속을 구현하게 해주는 고급 기술이다.추상클래스는 추상 메소드 외에 맴버 변수나 일반 메소드를 가질 수 있지만인">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 인터페이스(Interface)">
+<meta property="og:url" content="http://kimakuh.github.io/2018/05/03/java-기초-인터페이스-Interface/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="인터페이스 (Interface) - 설계의 본질 인터페이스(Interface)는 얼핏 보기에는 추상(Abstract) 클래스와 매우 흡사한 개념으로 느껴질 수 있다.인터페이스는 숙련된 자바 개발자들에게 아주 선호되는 설계 기능이면서 자바에서 다중 상속을 구현하게 해주는 고급 기술이다.추상클래스는 추상 메소드 외에 맴버 변수나 일반 메소드를 가질 수 있지만인">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:32:44.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 인터페이스(Interface)">
+<meta name="twitter:description" content="인터페이스 (Interface) - 설계의 본질 인터페이스(Interface)는 얼핏 보기에는 추상(Abstract) 클래스와 매우 흡사한 개념으로 느껴질 수 있다.인터페이스는 숙련된 자바 개발자들에게 아주 선호되는 설계 기능이면서 자바에서 다중 상속을 구현하게 해주는 고급 기술이다.추상클래스는 추상 메소드 외에 맴버 변수나 일반 메소드를 가질 수 있지만인">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 인터페이스(Interface)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-05-03T12:36:42.000Z" itemprop="datePublished">May 3 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 896 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>인터페이스 (Interface) - 설계의 본질</p>
+<p>인터페이스(Interface)는 얼핏 보기에는 추상(Abstract) 클래스와 매우 흡사한 개념으로 느껴질 수 있다.<br>인터페이스는 숙련된 자바 개발자들에게 아주 선호되는 설계 기능이면서 자바에서 다중 상속을 구현하게 해주는 고급 기술이다.<br>추상클래스는 추상 메소드 외에 맴버 변수나 일반 메소드를 가질 수 있지만<br>인터페이스에서는 반드시 사전에 정의된 추상 메소드와 상수만을 가질 수 있다는 특징이 있다.</p>
+<p>인터페이스는 팀 프로젝트의 동시 작업에 유리하고 일반적으로 추상보다 요구되는 설계의 기준이 높아서 더 체계적이라고 평한다.</p>
+<p>기본적으로 자바에서는 다중상속 구현이 불가하다. 즉 하나의 클래스가 여러개의 클래스에서 상속을 받는것이 불가하다.<br>하지만 인터페이스를 사용하면 다중상속 구현이 가능하다.</p>
+<p>인터페이스는 설계만 하는 것이다.</p>
+<p>인터페이스는 추상클래스보다 더 엄격한 설계</p>
+<h2 id="인터페이스를-선언하고-메소드를-다루어본다"><a href="#인터페이스를-선언하고-메소드를-다루어본다" class="headerlink" title="인터페이스를 선언하고 메소드를 다루어본다."></a>인터페이스를 선언하고 메소드를 다루어본다.</h2><p>Dog.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123; <span class="hljs-comment">// 오류가 발생한다.</span></span><br><span class="line">                         <span class="hljs-comment">// 인터페이스는 미리 일반 메서드를 가지는 것을 막아놓았다.</span></span><br><span class="line">                         <span class="hljs-comment">// 즉 인터페이스 안에서는 설계만 가능하다.</span></span><br><span class="line">                         <span class="hljs-comment">// 아래와 같이 실질적인 코드를 작성하면 오류가 발생한다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"Hello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>하지만 위의 클래스를 추상클래스로 바꾸어주면 오류가 발생하지 않는다.</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123; <span class="hljs-comment">// 오류가 발생한다.</span></span><br><span class="line">                         <span class="hljs-comment">// 인터페이스는 미리 일반 메서드를 가지는 것을 막아놓았다.</span></span><br><span class="line">                         <span class="hljs-comment">// 즉 인터페이스 안에서는 설계만 가능하다.</span></span><br><span class="line">                         <span class="hljs-comment">// 아래와 같이 실질적인 코드를 작성하면 오류가 발생한다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"Hello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>따라서 인터페이스를 사용하려면 아래와 같이 어떤 함수가 존재하는지만 알려줘야한다.<br>즉, 설계만 가능하다.</p>
+<p>Dog.java<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Main.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Dog</span> </span>&#123; <span class="hljs-comment">// 인터페이스는 implements를 사용</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Main main = <span class="hljs-keyword">new</span> Main();</span><br><span class="line">        main.crying();</span><br><span class="line">        main.show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"멍멍"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"강아지가 짖는다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="인터페이스의-다중-상속에-대하여-학습한다"><a href="#인터페이스의-다중-상속에-대하여-학습한다" class="headerlink" title="인터페이스의 다중 상속에 대하여 학습한다."></a>인터페이스의 다중 상속에 대하여 학습한다.</h2><p>Dog.java<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Cat.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>아래와 같이 Dog와 Cat을 둘다 상속받으려고 하면 오류가 발생한다.<br>==&gt;다중상속 불가</p>
+<p>Main.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Dog</span>, <span class="hljs-title">Cat</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Main main = <span class="hljs-keyword">new</span> Main();</span><br><span class="line">        main.crying();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"멍멍"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>인터페이스를 사용하여 다중상속을 구현해 본다.</p>
+<p>Dog.java<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Cat.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Cat</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>아래와 같이 인터페이스를 사용하면 Dog와 Cat을 둘다 상속 받더라도<br>오류가 발생하지 않는다.</p>
+<p>Main.java<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Dog</span>, <span class="hljs-title">Cat</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Main main = <span class="hljs-keyword">new</span> Main();</span><br><span class="line">        main.crying();</span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">crying</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"멍멍"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>※ 설계된 모든 메서드들을 다 구현해야 한다. 하나라도 구현하지 않으면 오류가 발생한다.</p>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/05/03/java-기초-다형성/">[java]기초 - 다형성</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/05/03/java-기초-final/">[java]기초 - final</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

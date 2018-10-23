@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 상속 - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="상속 = 클래스 간의 상호작용 상속이란 쉽게 말해서 다른 클래스가 가지고 있는 정보를 자신이 포함하겠다는 의미즉, 다른 클래스에 대한 정보를 상속받아 자신이 그대로 사용할 수 있도록 한다. 하나의 사람을 의미하는 Person 클래스를 생성한다.1234567891011121314151617181920212223242526272829303132333435363">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 상속">
+<meta property="og:url" content="http://kimakuh.github.io/2018/05/02/java-기초-상속/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="상속 = 클래스 간의 상호작용 상속이란 쉽게 말해서 다른 클래스가 가지고 있는 정보를 자신이 포함하겠다는 의미즉, 다른 클래스에 대한 정보를 상속받아 자신이 그대로 사용할 수 있도록 한다. 하나의 사람을 의미하는 Person 클래스를 생성한다.1234567891011121314151617181920212223242526272829303132333435363">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:13:58.062Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 상속">
+<meta name="twitter:description" content="상속 = 클래스 간의 상호작용 상속이란 쉽게 말해서 다른 클래스가 가지고 있는 정보를 자신이 포함하겠다는 의미즉, 다른 클래스에 대한 정보를 상속받아 자신이 그대로 사용할 수 있도록 한다. 하나의 사람을 의미하는 Person 클래스를 생성한다.1234567891011121314151617181920212223242526272829303132333435363">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 상속
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-05-02T12:31:39.000Z" itemprop="datePublished">May 2 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 860 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>상속 = 클래스 간의 상호작용</p>
+<p>상속이란 쉽게 말해서 다른 클래스가 가지고 있는 정보를 자신이 포함하겠다는 의미<br>즉, 다른 클래스에 대한 정보를 상속받아 자신이 그대로 사용할 수 있도록 한다.</p>
+<h2 id="하나의-사람을-의미하는-Person-클래스를-생성한다"><a href="#하나의-사람을-의미하는-Person-클래스를-생성한다" class="headerlink" title="하나의 사람을 의미하는 Person 클래스를 생성한다."></a>하나의 사람을 의미하는 Person 클래스를 생성한다.</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String name;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> weight;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getAge</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getHeight</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> height;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setHeight</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.height = height;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getWeight</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> weight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setWeight</span><span class="hljs-params">(<span class="hljs-keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.weight = weight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line">        <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">        <span class="hljs-keyword">this</span>.age = age;</span><br><span class="line">        <span class="hljs-keyword">this</span>.height = height;</span><br><span class="line">        <span class="hljs-keyword">this</span>.weight = weight;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Person을-상속받아-하나의-학생을-의미하는-Student-클래스"><a href="#Person을-상속받아-하나의-학생을-의미하는-Student-클래스" class="headerlink" title="Person을 상속받아 하나의 학생을 의미하는 Student 클래스"></a>Person을 상속받아 하나의 학생을 의미하는 Student 클래스</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String studentID;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> garde;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> GPA;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStudentID</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> studentID;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setStudentID</span><span class="hljs-params">(String studentID)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.studentID = studentID;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getGarde</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> garde;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGarde</span><span class="hljs-params">(<span class="hljs-keyword">int</span> garde)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.garde = garde;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGPA</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> GPA;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGPA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> gPA)</span> </span>&#123;</span><br><span class="line">        GPA = gPA;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> weight, String studentID, <span class="hljs-keyword">int</span> garde, <span class="hljs-keyword">double</span> gPA)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>(name, age, height, weight);</span><br><span class="line">        <span class="hljs-keyword">this</span>.studentID = studentID;</span><br><span class="line">        <span class="hljs-keyword">this</span>.garde = garde;</span><br><span class="line">        GPA = gPA;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"----------------------------"</span>);</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생이름 : "</span> + getName());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생나이 : "</span> + getAge());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생키 : "</span> + getHeight());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생몸무게: "</span> + getWeight());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생 학번 : "</span> + getStudentID());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생 학년 : "</span> + getGarde());</span><br><span class="line">        System.out.println(<span class="hljs-string">"학생 학점 : "</span> + getGPA());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Student-클래스를-이용하여-객체를-생성"><a href="#Student-클래스를-이용하여-객체를-생성" class="headerlink" title="Student 클래스를 이용하여 객체를 생성"></a>Student 클래스를 이용하여 객체를 생성</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// TODO Auto-generated method stub</span></span><br><span class="line">    Student student1 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"초보자"</span>, <span class="hljs-number">20</span>,<span class="hljs-number">174</span>,<span class="hljs-number">40</span>,<span class="hljs-string">"20180502"</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4.5</span>);</span><br><span class="line">    Student student2 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"신규자"</span>, <span class="hljs-number">20</span>,<span class="hljs-number">180</span>,<span class="hljs-number">90</span>,<span class="hljs-string">"20180503"</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.0</span>);</span><br><span class="line">    </span><br><span class="line">    student1.show();</span><br><span class="line">    student2.show();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Person을-상속받아-하나의-선생님을-의미하는-Teacher-클래스"><a href="#Person을-상속받아-하나의-선생님을-의미하는-Teacher-클래스" class="headerlink" title="Person을 상속받아 하나의 선생님을 의미하는 Teacher 클래스"></a>Person을 상속받아 하나의 선생님을 의미하는 Teacher 클래스</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String teacherID;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> monthSalary;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> workedYear;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getTeacherID</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> teacherID;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setTeacherID</span><span class="hljs-params">(String teacherID)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.teacherID = teacherID;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getMonthSalary</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> monthSalary;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setMonthSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> monthSalary)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.monthSalary = monthSalary;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getWorkedYear</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> workedYear;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setWorkedYear</span><span class="hljs-params">(<span class="hljs-keyword">int</span> workedYear)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.workedYear = workedYear;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Teacher</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> weight, String teacherID, <span class="hljs-keyword">int</span> monthSalary, <span class="hljs-keyword">int</span> workedYear)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>(name, age, height, weight);</span><br><span class="line">        <span class="hljs-keyword">this</span>.teacherID = teacherID;</span><br><span class="line">        <span class="hljs-keyword">this</span>.monthSalary = monthSalary;</span><br><span class="line">        <span class="hljs-keyword">this</span>.workedYear = workedYear;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"----------------------------"</span>);</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사이름 : "</span> + getName());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사나이 : "</span> + getAge());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사키 : "</span> + getHeight());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사몸무게: "</span> + getWeight());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사 직원번호 : "</span> + getTeacherID());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사 월급 : "</span> + getMonthSalary());</span><br><span class="line">        System.out.println(<span class="hljs-string">"교사 연차 : "</span> + getWorkedYear());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="데이터를-입력받은-데이터를-배열을-이용하여-저장하고-출력하는-연습"><a href="#데이터를-입력받은-데이터를-배열을-이용하여-저장하고-출력하는-연습" class="headerlink" title="데이터를 입력받은 데이터를 배열을 이용하여 저장하고 출력하는 연습"></a>데이터를 입력받은 데이터를 배열을 이용하여 저장하고 출력하는 연습</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.print(<span class="hljs-string">"총 몇 명의 학생이 존재합니까? "</span>);</span><br><span class="line">        <span class="hljs-keyword">int</span> number = scan.nextInt();</span><br><span class="line">        Student[] students = <span class="hljs-keyword">new</span> Student[number];</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            String name;</span><br><span class="line">            <span class="hljs-keyword">int</span> age;</span><br><span class="line">            <span class="hljs-keyword">int</span> height;</span><br><span class="line">            <span class="hljs-keyword">int</span> weight;</span><br><span class="line">            String studentID;</span><br><span class="line">            <span class="hljs-keyword">int</span> garde;</span><br><span class="line">            <span class="hljs-keyword">double</span> gPA;</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 이름을 입력하세요 : "</span>);</span><br><span class="line">            name = scan.next();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 나이를 입력하세요 : "</span>);</span><br><span class="line">            age = scan.nextInt();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 키를 입력하세요 : "</span>);</span><br><span class="line">            height = scan.nextInt();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 몸무게를 입력하세요 : "</span>);</span><br><span class="line">            weight = scan.nextInt();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 학번을 입력하세요 : "</span>);</span><br><span class="line">            studentID = scan.next();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 학년을 입력하세요 : "</span>);</span><br><span class="line">            garde = scan.nextInt();</span><br><span class="line">            System.out.println(<span class="hljs-string">"학생의 학점을 입력하세요 : "</span>);</span><br><span class="line">            gPA = scan.nextDouble();</span><br><span class="line"></span><br><span class="line">            students[i] = <span class="hljs-keyword">new</span> Student(name, age, height, weight, studentID, garde, gPA);</span><br><span class="line">            System.out.println();</span><br><span class="line">            System.out.println(<span class="hljs-string">"----------------------------------------"</span>);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            students[i].show();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// TODO Auto-generated method stub</span></span><br><span class="line">        Student student1 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"초보자"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">174</span>, <span class="hljs-number">40</span>, <span class="hljs-string">"20180502"</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4.5</span>);</span><br><span class="line">        Student student2 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"신규자"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">180</span>, <span class="hljs-number">90</span>, <span class="hljs-string">"20180503"</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.0</span>);</span><br><span class="line"></span><br><span class="line">        student1.show();</span><br><span class="line">        student2.show();</span><br><span class="line"></span><br><span class="line">        Student[] student = <span class="hljs-keyword">new</span> Student[<span class="hljs-number">100</span>];</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;</span><br><span class="line">            student[i] = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"초보자"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">174</span>, <span class="hljs-number">40</span>, i + <span class="hljs-string">" "</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4.5</span>);</span><br><span class="line">            student[i].show();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Teacher teacher1 = <span class="hljs-keyword">new</span> Teacher(<span class="hljs-string">"선생님1"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">174</span>, <span class="hljs-number">40</span>, <span class="hljs-string">"teacher1"</span>, <span class="hljs-number">10000000</span>, <span class="hljs-number">5</span>);</span><br><span class="line">        Teacher teacher2 = <span class="hljs-keyword">new</span> Teacher(<span class="hljs-string">"선생님2"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">174</span>, <span class="hljs-number">40</span>, <span class="hljs-string">"teacher2"</span>, <span class="hljs-number">20000000</span>, <span class="hljs-number">6</span>);</span><br><span class="line"></span><br><span class="line">        teacher1.show();</span><br><span class="line">        teacher2.show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/05/02/java-기초-추상/">[java]기초 - 추상</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/22/java-기초-클래스-Class/">[java]기초 - 클래스(Class)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

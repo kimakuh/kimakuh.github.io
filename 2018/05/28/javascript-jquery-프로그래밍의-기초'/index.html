@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[javascript&amp;jquery] 프로그래밍의 기초 - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="스크립트란 무엇이며 어떻게 만들 수 있는가?스크립트는 명령어의 모음이다. 스크립트는 컴퓨터가 단계별로 따라 할 수 있는 명령어들로 구성된다.브라우저는 사용자가 웹페이지와 어떻게 상호작용하느냐에 따라 스크립트에서 필요한 부분만을 사용한다.스크립트는 주변 상황에 따라 코드의 서로 다른 부분을 실행할 수 있다. 스크립트란 무엇이며 어떻게 작성할 수 있는가? 스크">
+<meta name="keywords" content="javascript,jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[javascript&amp;jquery] 프로그래밍의 기초">
+<meta property="og:url" content="http://kimakuh.github.io/2018/05/28/javascript-jquery-프로그래밍의-기초'/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="스크립트란 무엇이며 어떻게 만들 수 있는가?스크립트는 명령어의 모음이다. 스크립트는 컴퓨터가 단계별로 따라 할 수 있는 명령어들로 구성된다.브라우저는 사용자가 웹페이지와 어떻게 상호작용하느냐에 따라 스크립트에서 필요한 부분만을 사용한다.스크립트는 주변 상황에 따라 코드의 서로 다른 부분을 실행할 수 있다. 스크립트란 무엇이며 어떻게 작성할 수 있는가? 스크">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-28T02:13:49.445Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[javascript&amp;jquery] 프로그래밍의 기초">
+<meta name="twitter:description" content="스크립트란 무엇이며 어떻게 만들 수 있는가?스크립트는 명령어의 모음이다. 스크립트는 컴퓨터가 단계별로 따라 할 수 있는 명령어들로 구성된다.브라우저는 사용자가 웹페이지와 어떻게 상호작용하느냐에 따라 스크립트에서 필요한 부분만을 사용한다.스크립트는 주변 상황에 따라 코드의 서로 다른 부분을 실행할 수 있다. 스크립트란 무엇이며 어떻게 작성할 수 있는가? 스크">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [javascript&amp;jquery] 프로그래밍의 기초
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-05-28T01:10:34.000Z" itemprop="datePublished">May 28 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 452 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="스크립트란-무엇이며-어떻게-만들-수-있는가"><a href="#스크립트란-무엇이며-어떻게-만들-수-있는가" class="headerlink" title="스크립트란 무엇이며 어떻게 만들 수 있는가?"></a>스크립트란 무엇이며 어떻게 만들 수 있는가?</h1><p>스크립트는 명령어의 모음이다.</p>
+<p>스크립트는 컴퓨터가 단계별로 따라 할 수 있는 명령어들로 구성된다.<br>브라우저는 사용자가 웹페이지와 어떻게 상호작용하느냐에 따라 스크립트에서 필요한 부분만을 사용한다.<br>스크립트는 주변 상황에 따라 코드의 서로 다른 부분을 실행할 수 있다.</p>
+<h2 id="스크립트란-무엇이며-어떻게-작성할-수-있는가"><a href="#스크립트란-무엇이며-어떻게-작성할-수-있는가" class="headerlink" title="스크립트란 무엇이며 어떻게 작성할 수 있는가?"></a>스크립트란 무엇이며 어떻게 작성할 수 있는가?</h2><ul>
+<li>스크립트는 컴퓨터가 목표한 바를 달성하기 위해 실행해야 하는 명령의 집합이다.</li>
+<li>스크립트는 실행될 때마다 전체 명령의 일부를 실행하며, 실행되는 명령은 매번 다를 수 있다.</li>
+<li>명령들은 컴퓨터가 작업을 프로그래밍적으로 해결할 수 있도록 구성되어야 한다.</li>
+<li>스크립트를 작성하려면 목표를 세부적인 단계로 나눈 후 각 단계를 완료하기 위한 작업들을 정의해야 한다.(이때 흐름도를 작성하는 것이 큰 도움이 된다.)</li>
+</ul>
+<h2 id="객체와-속성"><a href="#객체와-속성" class="headerlink" title="객체와 속성"></a>객체와 속성</h2><h3 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h3><p>컴퓨터 프로그래밍에서 실제 세계에 존재하는 각각의 물리적인 물체들은 객체(object)로 표현된다.</p>
+<p>각각의 객체는 아래의 정보를 결합되어 객체를 표현허는 모델을 구성한다.</p>
+<ul>
+<li>속성(properties)</li>
+<li>이벤트(events)</li>
+<li>메서드(methods)</li>
+</ul>
+<h3 id="속성-특징"><a href="#속성-특징" class="headerlink" title="속성(특징)"></a>속성(특징)</h3><p>각 속성은 이름(name)과 값(value)로 구성되며, 이름과 값은 객체의 개별 인스턴스가 정확히 어떤 것인지를 표현하는데 사용된다.</p>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/javascript/">#javascript</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/jquery/">#jquery</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/05/28/chapter01-변수/">[javascript &amp; jquery] - chapter01 변수_part01</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/05/05/spring-chapter02-스프링에-대한-간단-소개/">[spring] chapter02 - 스프링에 대한 간단 소개</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

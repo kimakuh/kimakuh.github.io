@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java] 기초 - 연산자(Operator) - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="연산자 : 연산을 도와주는 문법 계산의 기본 연산자 참고사항 i++ 와 ++i 는 단순히 값을 증가시키려는 목적이라면 그 기능이 동일하다. 100 &amp;lt; x &amp;lt; 200은 잘못된 표현이다. ==&amp;gt; (100 &amp;lt; x) &amp;amp;&amp;amp; (x &amp;lt; 200)로 표현하는것이 올바른 연산식 표현이다. i++ 은 i+ 와 동일한 표현이다. 또한,">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java] 기초 - 연산자(Operator)">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/21/java기초-연산자-Operator/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="연산자 : 연산을 도와주는 문법 계산의 기본 연산자 참고사항 i++ 와 ++i 는 단순히 값을 증가시키려는 목적이라면 그 기능이 동일하다. 100 &amp;lt; x &amp;lt; 200은 잘못된 표현이다. ==&amp;gt; (100 &amp;lt; x) &amp;amp;&amp;amp; (x &amp;lt; 200)로 표현하는것이 올바른 연산식 표현이다. i++ 은 i+ 와 동일한 표현이다. 또한,">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:13:17.689Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java] 기초 - 연산자(Operator)">
+<meta name="twitter:description" content="연산자 : 연산을 도와주는 문법 계산의 기본 연산자 참고사항 i++ 와 ++i 는 단순히 값을 증가시키려는 목적이라면 그 기능이 동일하다. 100 &amp;lt; x &amp;lt; 200은 잘못된 표현이다. ==&amp;gt; (100 &amp;lt; x) &amp;amp;&amp;amp; (x &amp;lt; 200)로 표현하는것이 올바른 연산식 표현이다. i++ 은 i+ 와 동일한 표현이다. 또한,">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java] 기초 - 연산자(Operator)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T08:20:21.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 686 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>연산자 : 연산을 도와주는 문법</p>
+<p>계산의 기본</p>
+<h2 id="연산자-참고사항"><a href="#연산자-참고사항" class="headerlink" title="연산자 참고사항"></a>연산자 참고사항</h2><ul>
+<li>i++ 와 ++i 는 단순히 값을 증가시키려는 목적이라면 그 기능이 동일하다.</li>
+<li>100 &lt; x &lt; 200은 잘못된 표현이다. ==&gt; (100 &lt; x) &amp;&amp; (x &lt; 200)로 표현하는것이 올바른 연산식 표현이다.</li>
+<li>i++ 은 i+ 와 동일한 표현이다. 또한, i= i + 1 과도 동일한 표현이다.==&gt;모두 1만큼 증가시킨다는 의미를 나타낸다.</li>
+</ul>
+<p>##</p>
+<h2 id="초를-입력-받아-몇-분-몇-초인지-계산하는-프로그램"><a href="#초를-입력-받아-몇-분-몇-초인지-계산하는-프로그램" class="headerlink" title="초를 입력 받아 몇 분 몇 초인지 계산하는 프로그램"></a>초를 입력 받아 몇 분 몇 초인지 계산하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> SECOND = <span class="hljs-number">1000</span>; <span class="hljs-comment">// 상수 선언</span></span><br><span class="line">                                <span class="hljs-comment">// SECOND 상수에 1000을 넣는다(저장한다).</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> minute = SECOND / <span class="hljs-number">60</span>; <span class="hljs-comment">// 상수 1000초는 몇분</span></span><br><span class="line">    <span class="hljs-keyword">int</span> second = SECOND % <span class="hljs-number">60</span>; <span class="hljs-comment">// 상수 1000초는 몇초</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    System.out.println(minute + <span class="hljs-string">"분"</span> + second + <span class="hljs-string">"초"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 출력 16분 40초</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="와-–연산-증감연산자"><a href="#와-–연산-증감연산자" class="headerlink" title="++와 –연산(증감연산자)"></a>++와 –연산(증감연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );</span><br><span class="line">    a++;</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + ++a ); <span class="hljs-comment">// 먼저 a에 1을 더하여 출력</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a++ ); <span class="hljs-comment">// 값의 변화가 없다.</span></span><br><span class="line">                                                 <span class="hljs-comment">// 출력이 된 이후에 값이 변한다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );   <span class="hljs-comment">// 출력 결과 13</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="와-–연산2-증감연산자"><a href="#와-–연산2-증감연산자" class="headerlink" title="++와 –연산2(증감연산자)"></a>++와 –연산2(증감연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i = <span class="hljs-number">20</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i++;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i = i + <span class="hljs-number">1</span>; <span class="hljs-comment">// 아래의 식과 동일한 의미  ==&gt; 1이 증가한다.</span></span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i += <span class="hljs-number">1</span>; <span class="hljs-comment">// 위의 식과 동일한 의미 ==&gt; 1이 증가한다.</span></span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="연산자-모듈러-연산자"><a href="#연산자-모듈러-연산자" class="headerlink" title="%연산자(모듈러 연산자)"></a>%연산자(모듈러 연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 모듈러 연산자를 이용하여 나머지를 구한다.</span></span><br><span class="line">    System.out.println(<span class="hljs-number">1</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">2</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">3</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">4</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">5</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">6</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">//출력결과</span></span><br><span class="line">    <span class="hljs-comment">// 1</span></span><br><span class="line">    <span class="hljs-comment">// 2</span></span><br><span class="line">    <span class="hljs-comment">// 0</span></span><br><span class="line">    <span class="hljs-comment">// 1</span></span><br><span class="line">    <span class="hljs-comment">// 2</span></span><br><span class="line">    <span class="hljs-comment">// 0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="gt-lt-amp-amp-연산"><a href="#gt-lt-amp-amp-연산" class="headerlink" title="==, &gt;, &lt;, &amp;&amp;, ||, ! 연산"></a>==, &gt;, &lt;, &amp;&amp;, ||, ! 연산</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">50</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> b = <span class="hljs-number">50</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 같은가? "</span> + (a == b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 큰가? "</span> + (a &gt; b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 작은가? "</span> + (a &lt; b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 같으면서 a가 b보다 큰가? "</span> + ((a == b) &amp;&amp; (a &gt; b)));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a가 50이 아닌가? "</span> + !(a == <span class="hljs-number">50</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="조건-참-거짓-삼항연산자"><a href="#조건-참-거짓-삼항연산자" class="headerlink" title="조건 ? 참 : 거짓(삼항연산자)"></a>조건 ? 참 : 거짓(삼항연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> x = <span class="hljs-number">50</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> y = <span class="hljs-number">60</span>;</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"최대값 "</span> + max(x, y) );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 반환형, 함수이름, 매개변수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123; </span><br><span class="line">    <span class="hljs-keyword">int</span> result = (a &gt; b) ? a : b;</span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// int a와 int b를 입력받아서</span></span><br><span class="line">    <span class="hljs-comment">// 둘 중 더 큰값을 반환하는 max라는 함수</span></span><br><span class="line">    <span class="hljs-comment">// 둘 중 더 큰값을 int 형태로 반환한다.</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// int result 는 a가 보다 클 때</span></span><br><span class="line">    <span class="hljs-comment">// 식이 참값이라면 a를 반환하고</span></span><br><span class="line">    <span class="hljs-comment">// 거짓이라면 b를 반환한다.</span></span><br><span class="line">    <span class="hljs-comment">// 그리고 그 결과인 result를 반환한다.</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 출력결과 최대값 60</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pow-를-이용한-거듭제곱-연산"><a href="#pow-를-이용한-거듭제곱-연산" class="headerlink" title="pow()를 이용한 거듭제곱 연산"></a>pow()를 이용한 거듭제곱 연산</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> a = Math.pow(<span class="hljs-number">3.0</span>, <span class="hljs-number">20.0</span>); <span class="hljs-comment">// 3의 20제곱이 실수 a에 넣는다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"3의 20제곱은 "</span> + (<span class="hljs-keyword">int</span>) a);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/04/21/java-기초-조건문-반복문/">[java]기초 - 조건문 &amp; 반복문</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/21/java기초-자료형-DataType/">[java] 기초 - 자료형(Data Type)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

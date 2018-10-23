@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="Eirc Han&apos;s IT Blog using Hexo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Writer, IT Blog">
+<meta property="og:url" content="http://kimakuh.github.io/page/3/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="Eirc Han&apos;s IT Blog using Hexo">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Writer, IT Blog">
+<meta name="twitter:description" content="Eirc Han&apos;s IT Blog using Hexo">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/22/java-기초-배운내용정리하기-과제/" itemprop="url">[java]기초 - 배운내용정리하기(과제)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-22T02:53:57.000Z" itemprop="datePublished">Apr 22 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 130 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="이름을-출력하는-프로그램작성"><a href="#이름을-출력하는-프로그램작성" class="headerlink" title="이름을 출력하는 프로그램작성"></a>이름을 출력하는 프로그램작성</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);</span><br><span class="line">    System.out.print(<span class="hljs-string">"이름을 입력해 주세요 &gt; "</span>);</span><br><span class="line">    String name = scan.nextLine();</span><br><span class="line">    System.out.println(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="사각형-모양을-출력하는-프로그램"><a href="#사각형-모양을-출력하는-프로그램" class="headerlink" title="사각형 모양을 출력하는 프로그램"></a>사각형 모양을 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 이중 for문</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">10</span>; j++) &#123;</span><br><span class="line">            System.out.print(<span class="hljs-string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// while 문</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"---------------------------------"</span>);</span><br><span class="line">    <span class="hljs-keyword">int</span> line = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;</span><br><span class="line">            System.out.print(<span class="hljs-string">"6"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        line++;</span><br><span class="line">        <span class="hljs-keyword">if</span> (line == <span class="hljs-number">5</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="hljs-comment">// 꼼수...</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"---------------------------------"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>; count &lt; <span class="hljs-number">5</span>; count++) &#123;</span><br><span class="line">        System.out.print(<span class="hljs-string">"9999999999"</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/22/java-기초-기본-입출력-Input-Output/" itemprop="url">[java]기초 - 기본 입출력(Input &amp; Output)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-22T01:56:29.000Z" itemprop="datePublished">Apr 22 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 560 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>사용자와 상호작용<br>입력 받은 자료는 내부적으로 어떠한 처리를 한 뒤에 다시 사용자에게 그 값을 반환할 수 있다.</p>
+<p>프로그램이 입출력을 지원한다는 것은 사용자 인터페이스가 뛰어나다는 의미</p>
+<h2 id="기본입출력-팁"><a href="#기본입출력-팁" class="headerlink" title="기본입출력 팁"></a>기본입출력 팁</h2><ul>
+<li>자바에서는 Scanner클래스만 잘 활용해도 다양한 입출력 형태를 구현할 수 있다.</li>
+<li>주석은 일단 최대한 많이 작성하는 습관을 들여야 한다. 주석은 컴파일 단계에서 제거되기 때문에 프로그램의 크기와는 상관없다.</li>
+<li>Scanner로 문자열을 입력받고 싶을 때에는 next() 함수와 nextLine()을 적절히 활용하자.</li>
+</ul>
+<h2 id="특정한-정수를-입력받아서-그대로-출력하는-프로그램"><a href="#특정한-정수를-입력받아서-그대로-출력하는-프로그램" class="headerlink" title="특정한 정수를 입력받아서 그대로 출력하는 프로그램"></a>특정한 정수를 입력받아서 그대로 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in); <span class="hljs-comment">// 자바에서 제공하는 라이브러리</span></span><br><span class="line">                                           <span class="hljs-comment">// (System.in) 콘솔장에서 입력하는 어떠한 데이터.</span></span><br><span class="line">    System.out.print(<span class="hljs-string">"정수를 입력하세요 : "</span>);</span><br><span class="line">    <span class="hljs-keyword">int</span> i = scan.nextInt(); <span class="hljs-comment">// 입력받은 정수를 i에 넣어준다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"입력된 정수는 "</span> + i + <span class="hljs-string">"입니다."</span>);</span><br><span class="line">    scan.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="파일에-차례로-입력된-모든-정수에-100을-곱해-출력하는-프로그램"><a href="#파일에-차례로-입력된-모든-정수에-100을-곱해-출력하는-프로그램" class="headerlink" title="파일에 차례로 입력된 모든 정수에 100을 곱해 출력하는 프로그램"></a>파일에 차례로 입력된 모든 정수에 100을 곱해 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 파일을 컨트롤할 수 있는 file변수와</span></span><br><span class="line">    <span class="hljs-comment">// 그 파일로 부터 직접 파일에 쓰여있는 내용을 읽어올 수 있는 scan 변수를 만든다.</span></span><br><span class="line">    File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"input.txt"</span>); <span class="hljs-comment">// input.txt 파일을 읽어와서 file변수가 그것을 처리할 수 있게 한다.</span></span><br><span class="line">    <span class="hljs-keyword">try</span> &#123; <span class="hljs-comment">// 파일이 없을 경우, 또는 오류상황이 발생했을때를 대비해 예외처리를 한다.</span></span><br><span class="line">        Scanner scan = <span class="hljs-keyword">new</span> Scanner(file); <span class="hljs-comment">// 사용자로부터 입력받는게 아니라 파일을 통해 입력을 받는다.</span></span><br><span class="line">        <span class="hljs-keyword">while</span> (scan.hasNextInt()) &#123; <span class="hljs-comment">// scan이 읽어오고 있는 파일에서 다음으로 읽어올 정수가 있나 확인</span></span><br><span class="line">            System.out.println(scan.nextInt() * <span class="hljs-number">100</span>); <span class="hljs-comment">// 정수에 100을 곱하여 출력</span></span><br><span class="line">        &#125;</span><br><span class="line">        scan.close(); </span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"파일을 읽어오는 도중에 오류가 발생했습니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>input.txt</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">300 30 20 49 39 227</span><br></pre></td></tr></table></figure>
+<h2 id="1단부터-9단까지-구구단을-출력하는-프로그램"><a href="#1단부터-9단까지-구구단을-출력하는-프로그램" class="headerlink" title="1단부터 9단까지 구구단을 출력하는 프로그램"></a>1단부터 9단까지 구구단을 출력하는 프로그램</h2>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/21/java-기초-조건문-반복문/" itemprop="url">[java]기초 - 조건문 &amp; 반복문</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T11:34:20.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 942 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>논리적 흐름의 기본</p>
+<p>조건문 : 조건에 따라 실행하거나 실행하지 않거나. ==&gt; 조건에 따라서 실행여부 결정<br>반복문 : 조건이 맞다면 그 조건 안에서 계속해서 반복한다.</p>
+<h2 id="조건문-amp-반복문-정리"><a href="#조건문-amp-반복문-정리" class="headerlink" title="조건문 &amp; 반복문 정리"></a>조건문 &amp; 반복문 정리</h2><ul>
+<li>하나의 비교연산자는 true 혹은 false를 반환하게 됩니다.</li>
+<li>모든 조건문 / 반복문에서는 왠만하면 무조건 괄호를 적용해라.</li>
+<li>for문 혹은 while문은 얼마든지 중첩될 수 있다.</li>
+<li>for(;;)은 while(ture)와 똑같이 무한 루프라는 의미로 동작한다.</li>
+<li>break;를 이용하여 반복문을 즉시 빠져나올 수 있다.</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (;;) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"출력"</span>);</span><br><span class="line">        count++;</span><br><span class="line">        <span class="hljs-keyword">if</span> (count == <span class="hljs-number">10</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="if문을-이용하여-문자열이-특정문자열을-포함하는지-확인하는-프로그램"><a href="#if문을-이용하여-문자열이-특정문자열을-포함하는지-확인하는-프로그램" class="headerlink" title="if문을 이용하여 문자열이 특정문자열을 포함하는지 확인하는 프로그램"></a>if문을 이용하여 문자열이 특정문자열을 포함하는지 확인하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String a = <span class="hljs-string">"I LOVE YOU."</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 조건문</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">if</span>(a.contains(<span class="hljs-string">"LOVE"</span>)) &#123;</span><br><span class="line">        <span class="hljs-comment">// 문자열을 검사한다.</span></span><br><span class="line">        <span class="hljs-comment">// a에 들어있는 I LOVE YOU. 라는 문자열에</span></span><br><span class="line">        <span class="hljs-comment">// LOVE가 들어있는지(포함하는지)</span></span><br><span class="line">        <span class="hljs-comment">// 들어있는 경우 실행되는 문장이 들어간다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"Me Too."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        <span class="hljs-comment">// 들어있지 않은 경우 실행되는 부분</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"I Hate You."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="점수에-따라서-다른-메세지를-출력하는-프로그램"><a href="#점수에-따라서-다른-메세지를-출력하는-프로그램" class="headerlink" title="점수에 따라서 다른 메세지를 출력하는 프로그램"></a>점수에 따라서 다른 메세지를 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> score = <span class="hljs-number">95</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">90</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"A+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">80</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"B+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"C+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">60</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"D+ 입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"F 입니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="문자열과-정수형을-각각-조건문을-이용해-활용"><a href="#문자열과-정수형을-각각-조건문을-이용해-활용" class="headerlink" title="문자열과 정수형을 각각 조건문을 이용해 활용"></a>문자열과 정수형을 각각 조건문을 이용해 활용</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String a = <span class="hljs-string">"Man"</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> b = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 자바는 String을 비교할때 equal()을 이용한다.</span></span><br><span class="line">    <span class="hljs-comment">// 이유? String은 다른 자료형들과는 다른 문자열 자료형이기 때문이다.</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (a.equals(<span class="hljs-string">"Man"</span>)) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"남자입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"남자가 아닙니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (b == <span class="hljs-number">3</span>) &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"b는 3입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"b는 3이 아닙니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (a.equalsIgnoreCase(<span class="hljs-string">"man"</span>) &amp;&amp; b == <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">// 대소문자 구분을 하지 않고 비교</span></span><br><span class="line">                                               <span class="hljs-comment">// a가 대소문자와 상관없이 man 인지 비교하고</span></span><br><span class="line">                                               <span class="hljs-comment">// b가 0 이라면, 즉 둘다 참이라면 아래의 내용이 출력된다.</span></span><br><span class="line">        System.out.println(<span class="hljs-string">"참입니다."</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"거짓입니다."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">//  ==&gt; 위와 같이 연산자는 조건문 / 반복문과 함께 사용된다.</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while을-이용하여-1부터-1000까지의-합을-출력하는-프로그램"><a href="#while을-이용하여-1부터-1000까지의-합을-출력하는-프로그램" class="headerlink" title="while을 이용하여 1부터 1000까지의 합을 출력하는 프로그램"></a>while을 이용하여 1부터 1000까지의 합을 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>, sum = <span class="hljs-number">0</span>; <span class="hljs-comment">// 한번에 두개의 변수 선언</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">while</span> (i &lt;= <span class="hljs-number">1000</span>) &#123; <span class="hljs-comment">// 1부터 1000이 될때까지</span></span><br><span class="line">        sum += i++;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="hljs-string">"1부터 1000까지의 합 : "</span> + sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for문을-이용하여-삼각형을-출력하는-프로그램"><a href="#for문을-이용하여-삼각형을-출력하는-프로그램" class="headerlink" title="for문을 이용하여 삼각형을 출력하는 프로그램"></a>for문을 이용하여 삼각형을 출력하는 프로그램</h2><h3 id="for문-사용1"><a href="#for문-사용1" class="headerlink" title="for문 사용1"></a>for문 사용1</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">30</span>; <span class="hljs-comment">// N이라는 30이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// for문 : 초기화 부분, 조건 부분, 연산 부분</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N; i &gt; <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">// int 는 N부터 시작해서</span></span><br><span class="line">                                  <span class="hljs-comment">// i가 0보다 클때</span></span><br><span class="line">                                  <span class="hljs-comment">// i를 1씩 감소하며</span></span><br><span class="line">                                  <span class="hljs-comment">// 반복힌다.</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="hljs-string">"*"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="for문-사용2-이중for문"><a href="#for문-사용2-이중for문" class="headerlink" title="for문 사용2(이중for문)"></a>for문 사용2(이중for문)</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">30</span>; <span class="hljs-comment">// N이라는 30이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// for문 : 초기화 부분, 조건 부분, 연산 부분</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N; i &gt; <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">// int 는 N부터 시작해서</span></span><br><span class="line">                                  <span class="hljs-comment">// i가 0보다 클때</span></span><br><span class="line">                                  <span class="hljs-comment">// i를 1씩 감소하며</span></span><br><span class="line">                                  <span class="hljs-comment">// 반복힌다.</span></span><br><span class="line">        </span><br><span class="line">        <span class="hljs-comment">// 이중 for문</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j&gt;<span class="hljs-number">0</span>;j--) &#123;</span><br><span class="line">            System.out.print(<span class="hljs-string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println( );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for문을-이용하여-원을-출력하는-프로그램"><a href="#for문을-이용하여-원을-출력하는-프로그램" class="headerlink" title="for문을 이용하여 원을 출력하는 프로그램"></a>for문을 이용하여 원을 출력하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">15</span>; <span class="hljs-comment">// N이라는 15이라는 값을 가진 상수를 정의</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = -N; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j =- N; j &lt;= N; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (i * i + j * j &lt;= N * N) &#123;</span><br><span class="line">                System.out.print(<span class="hljs-string">"*"</span>);</span><br><span class="line">            &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                System.out.print(<span class="hljs-string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/21/java기초-연산자-Operator/" itemprop="url">[java] 기초 - 연산자(Operator)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T08:20:21.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 686 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>연산자 : 연산을 도와주는 문법</p>
+<p>계산의 기본</p>
+<h2 id="연산자-참고사항"><a href="#연산자-참고사항" class="headerlink" title="연산자 참고사항"></a>연산자 참고사항</h2><ul>
+<li>i++ 와 ++i 는 단순히 값을 증가시키려는 목적이라면 그 기능이 동일하다.</li>
+<li>100 &lt; x &lt; 200은 잘못된 표현이다. ==&gt; (100 &lt; x) &amp;&amp; (x &lt; 200)로 표현하는것이 올바른 연산식 표현이다.</li>
+<li>i++ 은 i+ 와 동일한 표현이다. 또한, i= i + 1 과도 동일한 표현이다.==&gt;모두 1만큼 증가시킨다는 의미를 나타낸다.</li>
+</ul>
+<p>##</p>
+<h2 id="초를-입력-받아-몇-분-몇-초인지-계산하는-프로그램"><a href="#초를-입력-받아-몇-분-몇-초인지-계산하는-프로그램" class="headerlink" title="초를 입력 받아 몇 분 몇 초인지 계산하는 프로그램"></a>초를 입력 받아 몇 분 몇 초인지 계산하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> SECOND = <span class="hljs-number">1000</span>; <span class="hljs-comment">// 상수 선언</span></span><br><span class="line">                                <span class="hljs-comment">// SECOND 상수에 1000을 넣는다(저장한다).</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> minute = SECOND / <span class="hljs-number">60</span>; <span class="hljs-comment">// 상수 1000초는 몇분</span></span><br><span class="line">    <span class="hljs-keyword">int</span> second = SECOND % <span class="hljs-number">60</span>; <span class="hljs-comment">// 상수 1000초는 몇초</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    System.out.println(minute + <span class="hljs-string">"분"</span> + second + <span class="hljs-string">"초"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 출력 16분 40초</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="와-–연산-증감연산자"><a href="#와-–연산-증감연산자" class="headerlink" title="++와 –연산(증감연산자)"></a>++와 –연산(증감연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );</span><br><span class="line">    a++;</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );</span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + ++a ); <span class="hljs-comment">// 먼저 a에 1을 더하여 출력</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a++ ); <span class="hljs-comment">// 값의 변화가 없다.</span></span><br><span class="line">                                                 <span class="hljs-comment">// 출력이 된 이후에 값이 변한다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"현재 a의 값 = "</span> + a );   <span class="hljs-comment">// 출력 결과 13</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="와-–연산2-증감연산자"><a href="#와-–연산2-증감연산자" class="headerlink" title="++와 –연산2(증감연산자)"></a>++와 –연산2(증감연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i = <span class="hljs-number">20</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i++;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i = i + <span class="hljs-number">1</span>; <span class="hljs-comment">// 아래의 식과 동일한 의미  ==&gt; 1이 증가한다.</span></span><br><span class="line">    System.out.println(i);</span><br><span class="line">    i += <span class="hljs-number">1</span>; <span class="hljs-comment">// 위의 식과 동일한 의미 ==&gt; 1이 증가한다.</span></span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="연산자-모듈러-연산자"><a href="#연산자-모듈러-연산자" class="headerlink" title="%연산자(모듈러 연산자)"></a>%연산자(모듈러 연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 모듈러 연산자를 이용하여 나머지를 구한다.</span></span><br><span class="line">    System.out.println(<span class="hljs-number">1</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">2</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">3</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">4</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">5</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    System.out.println(<span class="hljs-number">6</span> % <span class="hljs-number">3</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">//출력결과</span></span><br><span class="line">    <span class="hljs-comment">// 1</span></span><br><span class="line">    <span class="hljs-comment">// 2</span></span><br><span class="line">    <span class="hljs-comment">// 0</span></span><br><span class="line">    <span class="hljs-comment">// 1</span></span><br><span class="line">    <span class="hljs-comment">// 2</span></span><br><span class="line">    <span class="hljs-comment">// 0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="gt-lt-amp-amp-연산"><a href="#gt-lt-amp-amp-연산" class="headerlink" title="==, &gt;, &lt;, &amp;&amp;, ||, ! 연산"></a>==, &gt;, &lt;, &amp;&amp;, ||, ! 연산</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">50</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> b = <span class="hljs-number">50</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 같은가? "</span> + (a == b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 큰가? "</span> + (a &gt; b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 작은가? "</span> + (a &lt; b));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a와 b가 같으면서 a가 b보다 큰가? "</span> + ((a == b) &amp;&amp; (a &gt; b)));</span><br><span class="line">    System.out.println(<span class="hljs-string">"a가 50이 아닌가? "</span> + !(a == <span class="hljs-number">50</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="조건-참-거짓-삼항연산자"><a href="#조건-참-거짓-삼항연산자" class="headerlink" title="조건 ? 참 : 거짓(삼항연산자)"></a>조건 ? 참 : 거짓(삼항연산자)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> x = <span class="hljs-number">50</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> y = <span class="hljs-number">60</span>;</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"최대값 "</span> + max(x, y) );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 반환형, 함수이름, 매개변수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123; </span><br><span class="line">    <span class="hljs-keyword">int</span> result = (a &gt; b) ? a : b;</span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// int a와 int b를 입력받아서</span></span><br><span class="line">    <span class="hljs-comment">// 둘 중 더 큰값을 반환하는 max라는 함수</span></span><br><span class="line">    <span class="hljs-comment">// 둘 중 더 큰값을 int 형태로 반환한다.</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// int result 는 a가 보다 클 때</span></span><br><span class="line">    <span class="hljs-comment">// 식이 참값이라면 a를 반환하고</span></span><br><span class="line">    <span class="hljs-comment">// 거짓이라면 b를 반환한다.</span></span><br><span class="line">    <span class="hljs-comment">// 그리고 그 결과인 result를 반환한다.</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 출력결과 최대값 60</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pow-를-이용한-거듭제곱-연산"><a href="#pow-를-이용한-거듭제곱-연산" class="headerlink" title="pow()를 이용한 거듭제곱 연산"></a>pow()를 이용한 거듭제곱 연산</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> a = Math.pow(<span class="hljs-number">3.0</span>, <span class="hljs-number">20.0</span>); <span class="hljs-comment">// 3의 20제곱이 실수 a에 넣는다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"3의 20제곱은 "</span> + (<span class="hljs-keyword">int</span>) a);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/21/java기초-자료형-DataType/" itemprop="url">[java] 기초 - 자료형(Data Type)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T07:29:57.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 609 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자료형 : 나에게 필요한 데이터 타입</p>
+<p>어떠한 데이터를 표현하고 싶을 때,<br>데이터를 표현해줄 수 있는 타입을 만들어준다. =&gt; 표현할 데이터의 형태를 정의</p>
+<p>자료형(Data Type)</p>
+<ul>
+<li>Primitive (원시자료형)</li>
+<li>Non-Primitive (비원시자료형) =&gt; 내부적 함수가 존재한다.</li>
+</ul>
+<p>일반적인 프로그래밍 언어에는 정수 자료형 int , 실수 자료형 float과 double, 문자 자료형 char, 문자 자료형 char, 문자열 자료형 String이 사용된다. 자바에서는 특히 String을 많이 활용한다.</p>
+<h2 id="double을-이용한-평균값-구하는-프로그램"><a href="#double을-이용한-평균값-구하는-프로그램" class="headerlink" title="double을 이용한 평균값 구하는 프로그램"></a>double을 이용한 평균값 구하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> a = <span class="hljs-number">10.3</span>;</span><br><span class="line">    <span class="hljs-keyword">double</span> b = <span class="hljs-number">9.6</span>;</span><br><span class="line">    <span class="hljs-keyword">double</span> c = <span class="hljs-number">10.1</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println((a + b + c) / <span class="hljs-number">3</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 3개의 실수형을 선언해서 3개의 값을 더하고</span></span><br><span class="line">    <span class="hljs-comment">// 3으로 나눈 즉, 평균값을 구하는 프로그램</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="char을-이용한-문자출력-프로그램"><a href="#char을-이용한-문자출력-프로그램" class="headerlink" title="char을 이용한 문자출력 프로그램"></a>char을 이용한 문자출력 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> i = <span class="hljs-string">'a'</span>; i &lt;= <span class="hljs-string">'z'</span>; i++) &#123;</span><br><span class="line">        System.out.print(i + <span class="hljs-string">" "</span>);</span><br><span class="line">    </span><br><span class="line">        <span class="hljs-comment">// 컴퓨터 내부적으로 아스키코드를 활용하여</span></span><br><span class="line">        <span class="hljs-comment">// a 부터 z 까지 1씩 증가시키면서 출력한다.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10진수를-8진수와-16진수로-변경하는-프로그램"><a href="#10진수를-8진수와-16진수로-변경하는-프로그램" class="headerlink" title="10진수를 8진수와 16진수로 변경하는 프로그램"></a>10진수를 8진수와 16진수로 변경하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">200</span>;</span><br><span class="line">    System.out.println(<span class="hljs-string">"10진수: "</span> + a);</span><br><span class="line">    System.out.format(<span class="hljs-string">"8진수: %o\n"</span>, a); <span class="hljs-comment">// 형식지정자</span></span><br><span class="line">    System.out.format(<span class="hljs-string">"16진수: %x\n"</span>, a); <span class="hljs-comment">// 형식지정자</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 10진수를 8진수와 16진수로 변경</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="String의-substring-함수-활용"><a href="#String의-substring-함수-활용" class="headerlink" title="String의 substring 함수 활용"></a>String의 substring 함수 활용</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String name = <span class="hljs-string">"String Type"</span>;</span><br><span class="line">    System.out.println(name);</span><br><span class="line">    System.out.println(name.substring(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)); <span class="hljs-comment">// 실행결과 S</span></span><br><span class="line">                                              <span class="hljs-comment">// 0 =&gt; 출력할 첫번째문자열 (시작점)</span></span><br><span class="line">                                              <span class="hljs-comment">// 1 =&gt; 출력할 마지막 문자열 (종료점)</span></span><br><span class="line">    System.out.println(name.substring(<span class="hljs-number">5</span>, <span class="hljs-number">8</span>)); <span class="hljs-comment">// 실행결과 g T </span></span><br><span class="line">                                              <span class="hljs-comment">// 공백도 하나의 문자로 인식</span></span><br><span class="line">                                              </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="자료형-정리"><a href="#자료형-정리" class="headerlink" title="자료형 정리"></a>자료형 정리</h2><ul>
+<li>기본적으로 정수를 나타내는 자료형이 많은 이유는 각 자료형이 차지하는 메모리 공간의 크기가 다르기 때문</li>
+<li>double 형이라고 하더라도 과도하게 큰 수를 저장하고자 하면 잘못된 계산결과가 나올 수 있다.</li>
+<li>소수점 표기 형식을 지수형식으로 출력하고 싶으면 %e를 이용하면 된다.</li>
+<li>자바에서 String은 내부적으로 Char의 배열로 되어있다. 자바에서 String의 최대 크기는? 컴퓨터의 메모리 크기만큼</li>
+<li>자바의 String은 클래스 기반의 비원시적인 자료형</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/21/java기초-변수-Variable/" itemprop="url">[java] 기초 - 변수(Variable)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-21T05:43:07.000Z" itemprop="datePublished">Apr 21 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            8 minutes read (About 1154 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>변수의 설정 및 사용방법</p>
+<h2 id="변수-Variable-와-상수-Constant"><a href="#변수-Variable-와-상수-Constant" class="headerlink" title="변수(Variable)와 상수(Constant)"></a>변수(Variable)와 상수(Constant)</h2><p>변수: 변할수 있는 수 (열린 상자)<br>상수: 항상 변하지 않는 수 (닫힌 상자)</p>
+<p>변수는 그 내부에 있는 값을 프로그램이 실행되는 도중에 언제든지 교체할 수 있다.<br>상수는 한 번 설정되면 프로그램이 종료될 때까지 변경되지 않는 데이터이다.</p>
+<h2 id="변수의-쓰임"><a href="#변수의-쓰임" class="headerlink" title="변수의 쓰임"></a>변수의 쓰임</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 변수를 선언하고 그 안에 값을 넣는 초기화를 한다.</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> intType = <span class="hljs-number">100</span>; <span class="hljs-comment">// 변수를 선언하는 부분</span></span><br><span class="line">                       <span class="hljs-comment">// 정수형을 나타내는 int 변수의 이름을 intType으로 만들고</span></span><br><span class="line">                       <span class="hljs-comment">// intType이라는 변수안에 100 이란 값을 넣었다(저장한다).</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">double</span> doubleType = <span class="hljs-number">150.5</span>; <span class="hljs-comment">// 변수를 선언하는 부분</span></span><br><span class="line">                               <span class="hljs-comment">// 실수형을 나타내는 double 변수의 이름을 doubleType으로 만들고</span></span><br><span class="line">                               <span class="hljs-comment">// doubleType이라는 변수안에 150.5 라는 값을 넣었다(저장한다). </span></span><br><span class="line">    </span><br><span class="line">    String stringType = <span class="hljs-string">"문자열"</span>; <span class="hljs-comment">// 변수를 선언하는 부분</span></span><br><span class="line">                                  <span class="hljs-comment">// 문자열을 나타내는 String 변수의 이름을 stringType으로 만들고</span></span><br><span class="line">                                  <span class="hljs-comment">// stringType이라는 변수안에 "문자열" 이라는 값을 넣었다(저장한다).</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 각각의 변수를 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    System.out.println(intType); <span class="hljs-comment">// 괄호안에 들어있는 변수를 출력하고 한칸 줄바꿈을 한다.</span></span><br><span class="line">    System.out.println(doubleType); <span class="hljs-comment">// 괄호안에 들어있는 변수를 출력하고 한칸 줄바꿈을 한다.</span></span><br><span class="line">    System.out.println(stringType); <span class="hljs-comment">// 괄호안에 들어있는 변수를 출력하고 한칸 줄바꿈을 한다.</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="상수의-쓰임"><a href="#상수의-쓰임" class="headerlink" title="상수의 쓰임"></a>상수의 쓰임</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.141592</span>; <span class="hljs-comment">// 상수의 선언</span></span><br><span class="line">                                   <span class="hljs-comment">// 메인함수 밖에 선언된다.</span></span><br><span class="line">                                   <span class="hljs-comment">// final = 한번 선언되면 절대로 변하지 않는다. 바뀔 수 없다는 의미</span></span><br><span class="line">                                   <span class="hljs-comment">// ==&gt;즉 상수의 의미</span></span><br><span class="line">                                   <span class="hljs-comment">// PI라는 이름으로 상수를 정의하고</span></span><br><span class="line">                                   <span class="hljs-comment">// 3.141592라는 값을 넣었다(저장한다).</span></span><br><span class="line">                                   <span class="hljs-comment">// 상수는 절대 바뀔 수 없는 값이기 때문에 final이라는 문법을 사용한다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> r = <span class="hljs-number">30</span>; <span class="hljs-comment">// 변수의 선언</span></span><br><span class="line">                <span class="hljs-comment">// 정수형을 나타내는 int 변수의 이름을 r으로 만들고</span></span><br><span class="line">                <span class="hljs-comment">// r이라는 변수안에 30 이란 값을 넣었다(저장한다).</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 변수를 출력한다</span></span><br><span class="line">    </span><br><span class="line">    System.out.println(r * r * PI); <span class="hljs-comment">// 원의 넓이를 구하는 공식</span></span><br><span class="line">                                    <span class="hljs-comment">// 반지름(r)이 30인 원의 넓이</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="표현가능범위"><a href="#표현가능범위" class="headerlink" title="표현가능범위"></a>표현가능범위</h2><p>표현</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> INT_MAX = <span class="hljs-number">2147483647</span>; <span class="hljs-comment">// 상수의 선언</span></span><br><span class="line">                                       <span class="hljs-comment">// INT_MAX라는 이름으로 정수형 상수를 정의하고</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> a = INT_MAX; <span class="hljs-comment">// 위에서 만들었던 INT_MAX라는 상수를 </span></span><br><span class="line">                     <span class="hljs-comment">// a라는 변수안에 값으로 넣어준다.</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 출력</span></span><br><span class="line">    System.out.println(a); <span class="hljs-comment">// 정상출력</span></span><br><span class="line">    System.out.println(a + <span class="hljs-number">1</span>); <span class="hljs-comment">//비정상출력(값의 오류)</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="자료형의-종류와-구분-Prinitive-Data-Type"><a href="#자료형의-종류와-구분-Prinitive-Data-Type" class="headerlink" title="자료형의 종류와 구분 (Prinitive Data Type)"></a>자료형의 종류와 구분 (Prinitive Data Type)</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">자료형</th>
+<th style="text-align:center">데이터</th>
+<th style="text-align:center">크기 (btye)</th>
+<th style="text-align:center">크기 (bit)</th>
+<th style="text-align:left">표현가능범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">참과 거짓</td>
+<td style="text-align:center">1 byte</td>
+<td style="text-align:center">1 bit</td>
+<td style="text-align:left">true, false</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">문자</td>
+<td style="text-align:center">2 byte</td>
+<td style="text-align:center">16 bits</td>
+<td style="text-align:left">Unicode  Character</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">정수</td>
+<td style="text-align:center">1 byte</td>
+<td style="text-align:center">8 bits</td>
+<td style="text-align:left">-128 ~ 127</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">정수</td>
+<td style="text-align:center">2 byte</td>
+<td style="text-align:center">16 bits</td>
+<td style="text-align:left">-32,768 ~ 32,767</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">정수</td>
+<td style="text-align:center">4 byte</td>
+<td style="text-align:center">32 bits</td>
+<td style="text-align:left">-2,147,483,648 ~ 2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">정수</td>
+<td style="text-align:center">8 byte</td>
+<td style="text-align:center">64 bits</td>
+<td style="text-align:left">-9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">실수</td>
+<td style="text-align:center">4 byte</td>
+<td style="text-align:center">32 bits</td>
+<td style="text-align:left">±(1.40129846432481707e-45 ~ 3.40282346638528860e+38)</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">실수</td>
+<td style="text-align:center">8 byte</td>
+<td style="text-align:center">64 bits</td>
+<td style="text-align:left">±(4.94065645841246544e-324d ~ 1.79769313486231570e+308d)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="사칙연산-프로그램"><a href="#사칙연산-프로그램" class="headerlink" title="사칙연산 프로그램"></a>사칙연산 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// a 와 b 변수를 선언하고 값을 넣어준다.(초기화)</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 사칙연산 출력</span></span><br><span class="line">    <span class="hljs-comment">// 문자열과 정수형 형태를 합쳐서 식을 표현할 수 있다.</span></span><br><span class="line">    System.out.println(<span class="hljs-string">"a + b = "</span> + (a + b)); </span><br><span class="line">    System.out.println(<span class="hljs-string">"a - b = "</span> + (a - b)); </span><br><span class="line">    System.out.println(<span class="hljs-string">"a * b = "</span> + (a * b)); </span><br><span class="line">    System.out.println(<span class="hljs-string">"a / b = "</span> + (a / b)); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="형변환-실수형-gt-정수형"><a href="#형변환-실수형-gt-정수형" class="headerlink" title="형변환(실수형 -&gt; 정수형)"></a>형변환(실수형 -&gt; 정수형)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> a1 = <span class="hljs-number">0.5</span>; <span class="hljs-comment">// a1 라는 값은 int로 선언되었기 때문에 정수만 들어갈 수 있다.</span></span><br><span class="line">             <span class="hljs-comment">// ==&gt; 오류가 발생한다. 0.5라는 실수는 넣을 수 없다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 해결방법</span></span><br><span class="line"><span class="hljs-keyword">int</span> a2 = (<span class="hljs-keyword">int</span>) <span class="hljs-number">0.5</span>; <span class="hljs-comment">// 형변환을 한다.</span></span><br><span class="line">                    <span class="hljs-comment">// ==&gt; 즉 실수형을 정수형으로 형변환한다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 출력</span></span><br><span class="line">System.out.println(a2); <span class="hljs-comment">// 출력결과  0</span></span><br><span class="line">                        <span class="hljs-comment">// ==&gt; 실수형을 정수형으로 바꿀 때에는</span></span><br><span class="line">                        <span class="hljs-comment">// ==&gt; 소수점 자리 뒷 부분은 전부 제거된다.</span></span><br></pre></td></tr></table></figure>
+<h2 id="형변환-정수형-gt-실수형"><a href="#형변환-정수형-gt-실수형" class="headerlink" title="형변환(정수형 -&gt; 실수형)"></a>형변환(정수형 -&gt; 실수형)</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">double</span> b = <span class="hljs-number">0.5</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = (<span class="hljs-keyword">int</span>) (b + <span class="hljs-number">0.5</span>); <span class="hljs-comment">// b 가 어떠한 실수 값이던 간에</span></span><br><span class="line">                             <span class="hljs-comment">// 항상 0.5를 더하고 int 형으로 변경한다.</span></span><br><span class="line">                             <span class="hljs-comment">// ==&gt; 항상 반올림이 된 값만 출력한다.</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 출력</span></span><br><span class="line">    System.out.println(a); <span class="hljs-comment">// 결과 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="변수활용의-주의사항"><a href="#변수활용의-주의사항" class="headerlink" title="변수활용의 주의사항"></a>변수활용의 주의사항</h2><ul>
+<li>자바에서는 변수 초기화를 하지 않으면 사용할 수 없다.</li>
+<li>정수를 나타내는 타입 [btye, short, int, long]</li>
+<li>정부 변수안에 실수를 넣으면 정수 부분만 변수에 저장된다.</li>
+<li>실수 값을 반올림할 때는 변수에 0.5를 더한 뒤에 정수형으로 형변환을 하면 된다.</li>
+<li>반올림한 값 =(int)(실수 + 0.5);</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/11/java-데이터-출력/" itemprop="url">[java] 데이터 출력</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-11T10:28:28.000Z" itemprop="datePublished">Apr 11 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 151 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자바의 입출력</p>
+<h2 id="데이터-출력-int-값-출력"><a href="#데이터-출력-int-값-출력" class="headerlink" title="데이터 출력 - int 값 출력"></a>데이터 출력 - int 값 출력</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileOutputStream out = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">"temp/test3.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">int</span> money = <span class="hljs-number">1_3456_7890</span>; <span class="hljs-comment">// = 0x080557d2</span></span><br><span class="line">    </span><br><span class="line">    out.write(money); <span class="hljs-comment">//항상 출력할 때는 맨 끝 1바이트만 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="데이터-출력-int-값-읽기"><a href="#데이터-출력-int-값-읽기" class="headerlink" title="데이터 출력 - int 값 읽기"></a>데이터 출력 - int 값 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileInputStream in = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">"temp/test3.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// Exam02_1을 실행하여 출력한 데이터를 read()로 읽는다. </span></span><br><span class="line">    <span class="hljs-comment">// read()는 1바이트를 읽어 int 값으로 만든 후 리턴한다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> value = in.read(); <span class="hljs-comment">// 실제 리턴한 값은 0x08이다.</span></span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%x\n"</span>, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/11/java-Character-Stream/" itemprop="url">[java] Character Stream</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-11T10:19:48.000Z" itemprop="datePublished">Apr 11 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            9 minutes read (About 1275 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자바의 입출력</p>
+<h2 id="Character-Stream-문자-단위로-출력하기"><a href="#Character-Stream-문자-단위로-출력하기" class="headerlink" title="Character Stream - 문자 단위로 출력하기"></a>Character Stream - 문자 단위로 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 1) 문자 단위로 출력할 도구 준비</span></span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 2) 문자 출력하기</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 자바는 문자 데이터를 다룰 때 UTF-16(2바이트) 유니코드를 사용한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 그래서 출력할 때 UTF-16 2바이트 유니코드값을 </span></span><br><span class="line">    <span class="hljs-comment">//    JVM에 설정된 기본 문자코드표의 값으로 변환하여 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM을 실행할 때 출력 데이터의 문자 코드표를 지정하지 않으면 </span></span><br><span class="line">    <span class="hljs-comment">//    OS의 기본 문자코드표에 따라 변환한다.</span></span><br><span class="line">    <span class="hljs-comment">//    예) Windows OS(MS949), Unix(UTF-8)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM을 실행할 때 출력 데이터의 문자 코드표를 지정하는 방법</span></span><br><span class="line">    <span class="hljs-comment">//    &gt; java -Dfile.encoding=문자코드표 -cp 클래스경로 클래스명</span></span><br><span class="line">    <span class="hljs-comment">// </span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 따라서 다음 4바이트 값을 출력하면 </span></span><br><span class="line">    <span class="hljs-comment">//    앞의 2바이트는 버리고, 뒤의 2바이트(UTF-16)를 UTF-8 코드표에 따라 </span></span><br><span class="line">    <span class="hljs-comment">//    1 ~ 4 바이트 값으로 변환하여 출력한다.</span></span><br><span class="line">    out.write(<span class="hljs-number">0x7a6bac00</span>); </span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"출력 완료!"</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-단위로-읽기"><a href="#Character-Stream-문자-단위로-읽기" class="headerlink" title="Character Stream - 문자 단위로 읽기"></a>Character Stream - 문자 단위로 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 1) 파일의 데이터를 읽을 객체를 준비한다. </span></span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 2) JVM에 설정된 문자코드표에 따라 바이트를 읽어서 UTF-16으로 바꾼 후에 리턴한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 2바이트 UTF-16의 코드 값이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM에 설정된 문자코드표가 UTF-8이면 1 ~ 4 바이트까지 </span></span><br><span class="line">    <span class="hljs-comment">//    문자에 따라 가변적으로 읽어들이다.</span></span><br><span class="line">    <span class="hljs-comment">//    즉 영어 문자는 1바이트를 읽어 2바이트 UTF-16 코드 값으로 바꿀 것이다.</span></span><br><span class="line">    <span class="hljs-comment">//    한글 문자는 3바이트를 읽어 2바이트 UTF-16 코드 값으로 바꿀 것이다.</span></span><br><span class="line">    <span class="hljs-comment">//    문자에 따라 읽는 바이트의 개수가 다르다는 것이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 이것이 FileInputStream의 read() 메서드와 다른 점이다.</span></span><br><span class="line">    <span class="hljs-comment">//    FileInputStream의 read()는 무조건 1바이트를 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">//    그리고 값을 변환하지 않는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; FileReader의 read()는 문자에 따라 1 바이트에서 4 바이트까지 </span></span><br><span class="line">    <span class="hljs-comment">//    읽는 바이트 수가 다른다. </span></span><br><span class="line">    <span class="hljs-comment">//    리턴 값도 읽을 값을 그대로 리턴하는 것이 아니라 UTF-16 코드 값으로 변경하여 </span></span><br><span class="line">    <span class="hljs-comment">//    리턴한다. </span></span><br><span class="line">    <span class="hljs-comment">//    왜? JVM에서 문자를 UTF-16 코드 값으로 다루기 때문이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 그래서 이미지 파일이나 동영상 파일과 같이 바이너리 데이터는 </span></span><br><span class="line">    <span class="hljs-comment">///   FileReader를 사용하여 읽어서는 안된다.</span></span><br><span class="line">    <span class="hljs-comment">//    왜? 문자라고 간주하고 값을 변경하기 때문이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> ch = in.read(); </span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 3) 읽기 도구를 닫는다.</span></span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%x\n"</span>, ch);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열-출력하기"><a href="#Character-Stream-문자-배열-출력하기" class="headerlink" title="Character Stream - 문자 배열 출력하기"></a>Character Stream - 문자 배열 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] chars = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[] &#123;<span class="hljs-string">'A'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'C'</span>,<span class="hljs-string">'가'</span>,<span class="hljs-string">'각'</span>,<span class="hljs-string">'간'</span>,<span class="hljs-string">'똘'</span>,<span class="hljs-string">'똥'</span>&#125;; </span><br><span class="line">    </span><br><span class="line">    out.write(chars); <span class="hljs-comment">// 문자 배열 전체를 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// 당연히 UTF-16을 JVM 기본 문자 코드표에 따라 변환하여 출력한다.</span></span><br><span class="line">    <span class="hljs-comment">// JVM이 입출력 문자 코드표로 UTF-8을 사용한다면</span></span><br><span class="line">    <span class="hljs-comment">// 영어는 1바이트로 변환되어 출력될 것이고,</span></span><br><span class="line">    <span class="hljs-comment">// 한글은 3바이트로 변환되어 출력될 것이다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열-읽기"><a href="#Character-Stream-문자-배열-읽기" class="headerlink" title="Character Stream - 문자 배열 읽기"></a>Character Stream - 문자 배열 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// UTF-16 문자 코드 값을 저장할 배열을 준비한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 이렇게 임시 데이터를 저장하기 위해 만든 바이트 배열을 보통 "버퍼(buffer)"라 한다.</span></span><br><span class="line">    <span class="hljs-keyword">char</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 버퍼가 꽉 찰 때까지 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 물론 버퍼 크기보다 파일의 데이터가 적으면 파일을 모두 읽어 버퍼에 저장한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 읽은 바이트의 개수이다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 파일을 읽을 때 JVM의 문자코드표에 따라 바이트를 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">//    그리고 2바이트 UTF-16 코드 값으로 변환하여 리턴한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; JVM의 문자코드표가 UTF-8이라면,</span></span><br><span class="line">    <span class="hljs-comment">//    파일을 읽을 때, 영어나 숫자, 특수기호는 1바이트를 읽어 UTF-16으로 변환할 것이고</span></span><br><span class="line">    <span class="hljs-comment">//    한글은 3바이트를 읽어 UTF-16으로 변환할 것이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf); </span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%c(%x) "</span>, buf[i], (<span class="hljs-keyword">int</span>)buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-문자-배열의-특정-부분을-출력하기"><a href="#Character-Stream-문자-배열의-특정-부분을-출력하기" class="headerlink" title="Character Stream - 문자 배열의 특정 부분을 출력하기"></a>Character Stream - 문자 배열의 특정 부분을 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileWriter out = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] chars = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[] &#123;<span class="hljs-string">'A'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'C'</span>,<span class="hljs-string">'가'</span>,<span class="hljs-string">'각'</span>,<span class="hljs-string">'간'</span>,<span class="hljs-string">'똘'</span>,<span class="hljs-string">'똥'</span>&#125;; </span><br><span class="line">    </span><br><span class="line">    out.write(chars, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 2번 문자부터 3 개의 문자를 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Character-Stream-읽은-데이터를-문자-배열의-특정-위치에-저장하기"><a href="#Character-Stream-읽은-데이터를-문자-배열의-특정-위치에-저장하기" class="headerlink" title="Character Stream - 읽은 데이터를 문자 배열의 특정 위치에 저장하기"></a>Character Stream - 읽은 데이터를 문자 배열의 특정 위치에 저장하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileReader in = <span class="hljs-keyword">new</span> FileReader(<span class="hljs-string">"temp/test2.txt"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">char</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소, 저장할위치, 읽을바이트개수)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 실제 읽은 문자의 개수이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf, <span class="hljs-number">10</span>, <span class="hljs-number">40</span>); <span class="hljs-comment">// 40개의 문자를 읽어 10번 방부터 저장한다. </span></span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>; i &lt; (count + <span class="hljs-number">10</span>); i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%c(%x) "</span>, buf[i], (<span class="hljs-keyword">int</span>)buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/11/java-Byte-Stream/" itemprop="url">[java] Byte Stream</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-11T10:02:19.000Z" itemprop="datePublished">Apr 11 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 716 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>자바의 입출력</p>
+<h2 id="Byte-Stream-바이트-단위로-출력하기"><a href="#Byte-Stream-바이트-단위로-출력하기" class="headerlink" title="Byte Stream - 바이트 단위로 출력하기"></a>Byte Stream - 바이트 단위로 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="hljs-comment">// 1) 파일로 데이터를 출력하는 객체를 준비한다. </span></span><br><span class="line">        FileOutputStream out = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-comment">// 2) 1바이트를 출력한다.</span></span><br><span class="line">        <span class="hljs-comment">// =&gt; int 값을 아규먼트로 넘기더라도 맨 마지막 1바이트만 출력한다.</span></span><br><span class="line">        out.write(<span class="hljs-number">0x7a6b5c4d</span>); <span class="hljs-comment">// 출력하는 값은 0x4d 이다.</span></span><br><span class="line">        </span><br><span class="line">        <span class="hljs-comment">// 3) 출력 도구를 닫는다.</span></span><br><span class="line">        <span class="hljs-comment">// =&gt; 항상 입출력 도구를 사용한 후 닫아야 한다.</span></span><br><span class="line">        <span class="hljs-comment">// =&gt; 어떤 입출력 도구는 닫지 않으면 버퍼(임시메모리)에 남아있는 데이터가 </span></span><br><span class="line">        <span class="hljs-comment">//    출력되지 않고 버려진다.</span></span><br><span class="line">        out.close();</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Byte-Stream-바이트-단위로-읽기"><a href="#Byte-Stream-바이트-단위로-읽기" class="headerlink" title="Byte Stream - 바이트 단위로 읽기"></a>Byte Stream - 바이트 단위로 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 1) 파일의 데이터를 읽을 객체를 준비한다. </span></span><br><span class="line">    FileInputStream in = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 2) 1바이트를 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; read() 메서드의 리턴 타입이 int 라 하더라도 1바이트를 읽어 리턴한다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> b = in.read(); <span class="hljs-comment">// 읽은 값은 0x4d 이다.</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 3) 읽기 도구를 닫는다.</span></span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%x\n"</span>, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Byte-Stream-바이트-배열-출력하기"><a href="#Byte-Stream-바이트-배열-출력하기" class="headerlink" title="Byte Stream - 바이트 배열 출력하기"></a>Byte Stream - 바이트 배열 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileOutputStream out = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">byte</span>[] bytes = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[] &#123;<span class="hljs-number">0x7a</span>, <span class="hljs-number">0x6b</span>, <span class="hljs-number">0x5c</span>, <span class="hljs-number">0x4d</span>, <span class="hljs-number">0x3e</span>, <span class="hljs-number">0x2f</span>, <span class="hljs-number">0x30</span>&#125;;</span><br><span class="line">    </span><br><span class="line">    out.write(bytes); <span class="hljs-comment">// 바이트 배열 전체를 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Byte-Stream-바이트-배열-읽기"><a href="#Byte-Stream-바이트-배열-읽기" class="headerlink" title="Byte Stream - 바이트 배열 읽기"></a>Byte Stream - 바이트 배열 읽기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileInputStream in = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 바이트들을 저장할 배열을 준비한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 이렇게 임시 데이터를 저장하기 위해 만든 바이트 배열을 보통 "버퍼(buffer)"라 한다.</span></span><br><span class="line">    <span class="hljs-keyword">byte</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 버퍼가 꽉 찰 때까지 읽는다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 물론 버퍼 크기보다 파일의 데이터가 적으면 파일을 모두 읽어 버퍼에 저장한다.</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 읽은 바이트의 개수이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf); </span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%x "</span>, buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Byte-Stream-바이트-배열의-특정-부분을-출력하기"><a href="#Byte-Stream-바이트-배열의-특정-부분을-출력하기" class="headerlink" title="Byte Stream - 바이트 배열의 특정 부분을 출력하기"></a>Byte Stream - 바이트 배열의 특정 부분을 출력하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileOutputStream out = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">byte</span>[] bytes = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[] &#123;<span class="hljs-number">0x7a</span>, <span class="hljs-number">0x6b</span>, <span class="hljs-number">0x5c</span>, <span class="hljs-number">0x4d</span>, <span class="hljs-number">0x3e</span>, <span class="hljs-number">0x2f</span>, <span class="hljs-number">0x30</span>&#125;;</span><br><span class="line">    </span><br><span class="line">    out.write(bytes, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 2번 데이터부터 3 바이트를 출력한다.</span></span><br><span class="line">    </span><br><span class="line">    out.close();</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="hljs-string">"데이터 출력 완료!"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Byte-Stream-읽은-데이터를-바이트-배열의-특정-위치에-저장하기"><a href="#Byte-Stream-읽은-데이터를-바이트-배열의-특정-위치에-저장하기" class="headerlink" title="Byte Stream - 읽은 데이터를 바이트 배열의 특정 위치에 저장하기"></a>Byte Stream - 읽은 데이터를 바이트 배열의 특정 위치에 저장하기</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    FileInputStream in = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">"temp/test1.data"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">byte</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">100</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// read(버퍼의주소, 저장할위치, 읽을바이트개수)</span></span><br><span class="line">    <span class="hljs-comment">// =&gt; 리턴 값은 실제 읽은 바이트의 개수이다.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> count = in.read(buf, <span class="hljs-number">10</span>, <span class="hljs-number">40</span>); <span class="hljs-comment">// 40바이트를 읽어 10번 방부터 저장한다. </span></span><br><span class="line">    </span><br><span class="line">    in.close();</span><br><span class="line">    </span><br><span class="line">    System.out.printf(<span class="hljs-string">"%d\n"</span>, count);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>; i &lt; (count + <span class="hljs-number">10</span>); i++)</span><br><span class="line">        System.out.printf(<span class="hljs-string">"%x "</span>, buf[i]);</span><br><span class="line">    </span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2018/04/07/github-page-and-hexo2/" itemprop="url">github-page-and-hexo2</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-06T15:53:23.000Z" itemprop="datePublished">Apr 7 2018</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 0 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+        
+<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+    <div class="pagination-previous">
+        <a href="/page/2/">Prev</a>
+    </div>
+    <div class="pagination-next">
+        <a href="/page/4/">Next</a>
+    </div>
+    <ul class="pagination-list is-hidden-mobile">
+        
+        <li><a class="pagination-link" href="/">1</a></li>
+        
+        <li><a class="pagination-link" href="/page/2/">2</a></li>
+        
+        <li><a class="pagination-link is-current" href="/page/3/">3</a></li>
+        
+        <li><a class="pagination-link" href="/page/4/">4</a></li>
+        
+    </ul>
+</nav>
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

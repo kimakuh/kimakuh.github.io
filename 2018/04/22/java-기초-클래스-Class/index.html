@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>[java]기초 - 클래스(Class) - Writer, IT Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="Eirc Han's IT Blog using Hexo">
+
+
+
+
+
+    <meta name="description" content="클래스는 객체 지향 프로그래밍에 있어서 가장 기본이 되는 것.클래스를 이용하여 현실 게계의 특정한 물건을 지칭할 수 있다.가장 많이 사용되는것이 Node클래스.개발 프로젝트에서는 하나의 처리할 데이터 단위를 명시하는데 사용되기도 한다. 하나의 틀어떤 특징 혹은 속성을 가진 변수를 만들어서 사용할 수 있도록하는것 =&amp;gt; 인스턴스화 =&amp;gt;인스턴스로 만든">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[java]기초 - 클래스(Class)">
+<meta property="og:url" content="http://kimakuh.github.io/2018/04/22/java-기초-클래스-Class/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="클래스는 객체 지향 프로그래밍에 있어서 가장 기본이 되는 것.클래스를 이용하여 현실 게계의 특정한 물건을 지칭할 수 있다.가장 많이 사용되는것이 Node클래스.개발 프로젝트에서는 하나의 처리할 데이터 단위를 명시하는데 사용되기도 한다. 하나의 틀어떤 특징 혹은 속성을 가진 변수를 만들어서 사용할 수 있도록하는것 =&amp;gt; 인스턴스화 =&amp;gt;인스턴스로 만든">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-29T03:14:01.165Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[java]기초 - 클래스(Class)">
+<meta name="twitter:description" content="클래스는 객체 지향 프로그래밍에 있어서 가장 기본이 되는 것.클래스를 이용하여 현실 게계의 특정한 물건을 지칭할 수 있다.가장 많이 사용되는것이 Node클래스.개발 프로젝트에서는 하나의 처리할 데이터 단위를 명시하는데 사용되기도 한다. 하나의 틀어떤 특징 혹은 속성을 가진 변수를 만들어서 사용할 수 있도록하는것 =&amp;gt; 인스턴스화 =&amp;gt;인스턴스로 만든">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/kimgaram" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/LifeStyle">Lifestyle</a>
+            
+            <a class="navbar-item " href="/categories/Music">Music</a>
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [java]기초 - 클래스(Class)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-04-22T13:05:38.000Z" itemprop="datePublished">Apr 22 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/java/">java</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 546 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>클래스는 객체 지향 프로그래밍에 있어서 가장 기본이 되는 것.<br>클래스를 이용하여 현실 게계의 특정한 물건을 지칭할 수 있다.<br>가장 많이 사용되는것이 Node클래스.<br>개발 프로젝트에서는 하나의 처리할 데이터 단위를 명시하는데 사용되기도 한다.</p>
+<p>하나의 틀<br>어떤 특징 혹은 속성을 가진 변수를 만들어서 사용할 수 있도록하는것 =&gt; 인스턴스화 =&gt;인스턴스로 만든다.</p>
+<p>객체 : 실제 세계의 사물</p>
+<h2 id="Node-클래스를-이용하여-두-점-사이의-중점을-구하는-프로그램"><a href="#Node-클래스를-이용하여-두-점-사이의-중점을-구하는-프로그램" class="headerlink" title="Node 클래스를 이용하여 두 점 사이의 중점을 구하는 프로그램"></a>Node 클래스를 이용하여 두 점 사이의 중점을 구하는 프로그램</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">Node.java</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// Node 라는것은 좌표를 의미</span></span><br><span class="line">    <span class="hljs-comment">// x와 y의 값을 외부에서 바꿀 수 없도록 private 사용</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getX</span><span class="hljs-params">()</span> </span>&#123; <span class="hljs-comment">// public을 사용해서 외부에서 getX()에 접근하도록 한다.</span></span><br><span class="line">        <span class="hljs-keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setX</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123; <span class="hljs-comment">// x의 값을 설정하는 함수</span></span><br><span class="line">        <span class="hljs-keyword">this</span>.x = x; <span class="hljs-comment">// 기존에 가지고있는 x의 값을 현재 매개변수 x 로 값을 변경</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getY</span><span class="hljs-params">()</span> </span>&#123; <span class="hljs-comment">// public을 사용해서 외부에서 getY()에 접근하도록 한다.</span></span><br><span class="line">        <span class="hljs-keyword">return</span> y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setY</span><span class="hljs-params">(<span class="hljs-keyword">int</span> y)</span> </span>&#123; <span class="hljs-comment">// y의 값을 설정하는 함수</span></span><br><span class="line">        <span class="hljs-keyword">this</span>.y = y; <span class="hljs-comment">// 기존에 가지고있는 y의 값을 현재 매개변수 y 로 값을 변경</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 생성자</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>&#123; <span class="hljs-comment">// 인스턴스 즉 객채를 하나 만들어줄때</span></span><br><span class="line">                                <span class="hljs-comment">// 자동으로 값들을 초기화 해주는 함수</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.x = x;</span><br><span class="line">        <span class="hljs-keyword">this</span>.y = y;</span><br><span class="line">        <span class="hljs-comment">// Node 라는 인스턴스 변수를 만들어줌과 동시에</span></span><br><span class="line">        <span class="hljs-comment">// x 와 y 의 값을 초기화 해준다.</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">getCenter</span><span class="hljs-params">(Node other)</span> </span>&#123; <span class="hljs-comment">// getCenter는 다른 Node를 매개변수로 받는다.</span></span><br><span class="line">                                        <span class="hljs-comment">// 즉 다른 Node와 비교해서</span></span><br><span class="line">                                        <span class="hljs-comment">// 자신이 가지고있는 x,y 좌표와 다른 Node가 가지고있는</span></span><br><span class="line">                                        <span class="hljs-comment">// x,y 좌표를 비교해서 정확히 정중앙을 가지는</span></span><br><span class="line">                                        <span class="hljs-comment">// 좌표를 반환한다.</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Node((<span class="hljs-keyword">this</span>.x + other.getX()) / <span class="hljs-number">2</span>, (<span class="hljs-keyword">this</span>.y + other.getY()) / <span class="hljs-number">2</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Main.java</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Node one = <span class="hljs-keyword">new</span> Node(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>);</span><br><span class="line">        Node two = <span class="hljs-keyword">new</span> Node(<span class="hljs-number">30</span>, <span class="hljs-number">40</span>);</span><br><span class="line"></span><br><span class="line">        Node result = one.getCenter(two);</span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="hljs-string">"x는 "</span> + result.getX());</span><br><span class="line">        System.out.println(<span class="hljs-string">"y는 "</span> + result.getY());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/java/">#java</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/05/02/java-기초-상속/">[java]기초 - 상속</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/04/22/java-기초-다차원배열/">[java]기초 - 다차원배열</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="disqus_thread">
+    
+    <div class="notification is-danger">
+        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
+    </div>
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2018 Eric Han&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
